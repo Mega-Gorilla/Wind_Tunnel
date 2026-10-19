@@ -1,0 +1,27 @@
+{
+  "status": "aborted",
+  "source": "OWON VDS1022I CH1",
+  "probe": 1,
+  "coupling": "DC",
+  "blocks": [
+    {
+      "key": "block_0000",
+      "samples": 4372,
+      "fs": 100000.0,
+      "frame_clock_pc": 357.8839993,
+      "received_pc_ns": 357898884600,
+      "received_realtime_ns": 1789015191037746900,
+      "sample_offset_s": 0.0,
+      "min_v": 2.619999885559082,
+      "max_v": 2.740000009536743,
+      "median_v": 2.679999828338623,
+      "clipped_fraction": 0.0
+    }
+  ],
+  "measurement_guard_v": [
+    -0.3,
+    3.5
+  ],
+  "guard_note": "Measurement envelope, NOT GPIO voltage rating. OFF DMM 3.242 V and observed OSC 2.98..3.44 V; retain clipping guard.",
+  "error": "AssertionError('Missed some samples! Reduce the sampling rate')"
+}

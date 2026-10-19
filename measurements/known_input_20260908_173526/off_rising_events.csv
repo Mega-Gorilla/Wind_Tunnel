@@ -1,0 +1,2 @@
+kernel_monotonic_ns,edge,gpio,global_seqno,line_seqno,userspace_read_monotonic_ns
+63141892683,RISING_EDGE,17,1,1,63142579402

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "viewports": [
+    [
+      800,
+      480
+    ],
+    [
+      1280,
+      800
+    ]
+  ],
+  "checks": [
+    "local bootstrap",
+    "session reload",
+    "monitor",
+    "finite start",
+    "lost start response retry does not duplicate run",
+    "stop",
+    "history CSV export",
+    "remote ON/OFF",
+    "token issue/revoke",
+    "HTTP remote start and UI OFF cancellation",
+    "fault/ack",
+    "stop accessible during confirmation",
+    "local SVG icons render with decorative semantics",
+    "active navigation and labelled touch targets",
+    "monitor fits 800x480 without scrolling",
+    "distinct success/error/running state labels",
+    "Japanese history details with collapsed JSON",
+    "connection loss and recovery feedback",
+    "desktop layout 1280x800",
+    "no external asset requests"
+  ],
+  "page_errors": []
+}

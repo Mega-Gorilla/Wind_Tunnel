@@ -1,0 +1,20 @@
+{
+  "installed_sha256": "78adee026ddf0c5db97f56cad0e7a884df33ac33251f310e745c262dfbf715c0",
+  "previous_sha256": "ae8e866a92884556ba0851570e5ca5f082da2a48ac16f3b6b9bfeda99f3df720",
+  "pico_backup": "main.backup-ae8e866a9288.py",
+  "status": {
+    "protocol": 1,
+    "firmware": "0.2.0-monitor",
+    "seq": 1,
+    "kind": "status",
+    "boot_id": "9473e858ecb4c349",
+    "fan_enabled": false,
+    "id": "installed-monitor",
+    "pico_ms": 3702816,
+    "device_id": "e660583883976d2d",
+    "gp16_level": 0,
+    "ok": true,
+    "fan_locked_stop": true,
+    "fan_command_percent": 0
+  }
+}

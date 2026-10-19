@@ -1,0 +1,139 @@
+{
+  "time": "2026-09-08T16:15:11.241015+09:00",
+  "gpio_disconnected_confirmed": true,
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "write": ":OUTP1:STAT OFF"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "write": ":SOUR1:CONT:IMM"
+    },
+    {
+      "write": ":SOUR1:COMB:FEED OFF"
+    },
+    {
+      "write": ":OUTP1:LOAD INF"
+    },
+    {
+      "write": ":SOUR1:FUNC SQU"
+    },
+    {
+      "write": ":SOUR1:FREQ:UNIT HZ"
+    },
+    {
+      "write": ":SOUR1:FREQ 50HZ"
+    },
+    {
+      "write": ":SOUR1:VOLT:UNIT VPP"
+    },
+    {
+      "write": ":SOUR1:VOLT:OFFS:UNIT V"
+    },
+    {
+      "write": ":SOUR1:VOLT 3VPP"
+    },
+    {
+      "write": ":SOUR1:VOLT:OFFS 1.5V"
+    },
+    {
+      "write": ":SOUR1:PULS:DCYC:UNIT PCT"
+    },
+    {
+      "write": ":SOUR1:FUNC:SQU:DCYC 50PCT"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU"
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1"
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF"
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V"
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ"
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1"
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "3.000E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0"
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1"
+    },
+    {
+      "write": ":OUTP1:STAT ON"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "1"
+    },
+    {
+      "write": ":OUTP1:STAT OFF"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "scope_only": true,
+  "capture_completed": true,
+  "final_output1": "0",
+  "final_output2": "0"
+}

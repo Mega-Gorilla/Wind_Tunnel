@@ -1,0 +1,22 @@
+{
+  "date_jst": "2026-10-17",
+  "purpose": "Read-only software design inventory; no device configuration or fan control performed",
+  "hostname": "wind-tunnel",
+  "python": "3.13.5",
+  "architecture": "armhf",
+  "kernel_architecture": "armv7l",
+  "memory_mib": {"total": 920, "used": 224, "available": 695, "swap_used": 0},
+  "root_filesystem_available_human": "8.2G",
+  "chromium": "1:149.0.7827.114-1~deb13u1+rpt1",
+  "labwc": "0.9.7-1+rpt1",
+  "python3_serial": "3.5-2",
+  "fastapi_installed": false,
+  "fastapi_apt_cached_candidate": "0.115.11-4",
+  "uvicorn_installed": false,
+  "uvicorn_apt_cached_candidate": "0.32.0-3",
+  "display": {"output": "DSI-1", "width_px": 800, "height_px": 480, "refresh_hz": 60.028999, "transform": "180", "scale": 1},
+  "pi_throttled": "0x0",
+  "pico_serial_present": true,
+  "probe_script": "tmp/pi_software_design_inventory_20261017.sh",
+  "note": "APT metadata was not refreshed. These are installed/current inventory and cached candidates, not a tested deployment dependency lock."
+}

@@ -1,0 +1,13 @@
+{
+  "screening_candidates": ["coarse_empty", "medium_empty", "coarse_repaired_plate", "medium_repaired_plate"],
+  "excluded": {
+    "coarse_plate": "Superseded layer configuration. 1 low-interpolation-weight face; stopped at 176 iterations before convergence.",
+    "medium_plate": "Standard checkMesh failed on 38 skew faces. Solver stopped at 6 iterations. Do not use numerical field results."
+  },
+  "screening_iteration_limit": {
+    "coarse_repaired_plate": 600,
+    "medium_repaired_plate": 600,
+    "reason": "Assess engineering-output stability and residuals in a bounded preliminary steady-RANS calculation. Reaching the limit is not evidence of convergence."
+  },
+  "calibration_use_authorized": false
+}

@@ -1,0 +1,18 @@
+{
+  "recorded_date": "2026-09-10",
+  "basis": "User clarified that the previously fitted C2 was marked 104, then replaced it with 103 and returned the input to GPIO17. Nominal values only; capacitance not measured.",
+  "original_log_claim_nf": 10,
+  "corrected_nominal_nf": 100,
+  "corrected_marking": "104",
+  "raw_logs_preserved": true,
+  "folders": [
+    "simultaneous_20260910_133928",
+    "simultaneous_20260910_134403",
+    "simultaneous_20260910_134459",
+    "simultaneous_20260910_134602",
+    "simultaneous_20260910_134729",
+    "simultaneous_20260910_162859",
+    "simultaneous_20260910_162945",
+    "simultaneous_20260910_163056"
+  ]
+}

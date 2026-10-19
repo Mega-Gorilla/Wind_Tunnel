@@ -1,0 +1,31 @@
+{
+  "model": "midpoint section extruded over 5 mm",
+  "source_section_samples": [
+    {
+      "source_Y_mm": 70.01,
+      "blocked_area_mm2": 2168.177849009228,
+      "symmetric_difference_from_midpoint_mm2": 0.3960241699230303
+    },
+    {
+      "source_Y_mm": 71.25,
+      "blocked_area_mm2": 2168.5738731791484,
+      "symmetric_difference_from_midpoint_mm2": 0.0
+    },
+    {
+      "source_Y_mm": 72.5,
+      "blocked_area_mm2": 2168.5738731791484,
+      "symmetric_difference_from_midpoint_mm2": 0.0
+    },
+    {
+      "source_Y_mm": 73.75,
+      "blocked_area_mm2": 2168.5738731791484,
+      "symmetric_difference_from_midpoint_mm2": 0.0
+    },
+    {
+      "source_Y_mm": 74.99,
+      "blocked_area_mm2": 2168.177849009228,
+      "symmetric_difference_from_midpoint_mm2": 0.3960241699230303
+    }
+  ],
+  "note": "Five sampled planes, not a proof for every CAD section."
+}

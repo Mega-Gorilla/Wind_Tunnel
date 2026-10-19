@@ -1,0 +1,59 @@
+{
+  "status": "completed",
+  "source": "OWON CH1 settled single shot",
+  "continuous": false,
+  "blocks": [
+    {
+      "key": "off_baseline",
+      "samples": 5000,
+      "fs": 25000.0,
+      "sample_offset_s": -0.1,
+      "duration_s": 0.2,
+      "min_v": 3.179999828338623,
+      "max_v": 3.299999952316284,
+      "median_v": 3.240000009536743,
+      "clipped_fraction": 0.0,
+      "fetch_begin_pc_ns": 15377629603000,
+      "fetch_end_pc_ns": 15377860306000
+    },
+    {
+      "key": "steady_baseline",
+      "samples": 5000,
+      "fs": 25000.0,
+      "sample_offset_s": -0.1,
+      "duration_s": 0.2,
+      "min_v": 0.5,
+      "max_v": 0.64000004529953,
+      "median_v": 0.5800000429153442,
+      "clipped_fraction": 0.0,
+      "fetch_begin_pc_ns": 15378633661200,
+      "fetch_end_pc_ns": 15378879134600
+    },
+    {
+      "key": "fast",
+      "samples": 5000,
+      "fs": 500000.0,
+      "sample_offset_s": -0.005,
+      "duration_s": 0.01,
+      "min_v": 0.5200000405311584,
+      "max_v": 0.64000004529953,
+      "median_v": 0.5800000429153442,
+      "clipped_fraction": 0.0,
+      "fetch_begin_pc_ns": 15380027224300,
+      "fetch_end_pc_ns": 15380044091100
+    }
+  ],
+  "probe": 1,
+  "coupling": "DC",
+  "rate_requested": "500k",
+  "trigger": "CH1 RISE 0.9 V ONCE, 50% pretrigger; arm after source settled",
+  "timing_limitation": "Host command timestamps, not hardware synchronization with Pi",
+  "arm_setup_begin_pc_ns": 15378885416200,
+  "armed_pc_ns": 15378950710900,
+  "trigger_observed_pc_ns": 15379962297000,
+  "natural_trigger_observed": false,
+  "trigger_wait_s": 1.0115861,
+  "auto_fallback_pc_ns": 15379962308100,
+  "capture_mode": "AUTO snapshot after no natural trigger",
+  "triggered_after_capture": 0
+}

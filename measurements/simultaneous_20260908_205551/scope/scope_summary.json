@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "source": "OWON CH1 single shot",
+  "blocks": [
+    {
+      "key": "off_baseline",
+      "samples": 5000,
+      "fs": 25000.0,
+      "sample_offset_s": -0.1,
+      "duration_s": 0.2,
+      "min_v": 2.9800000190734863,
+      "max_v": 3.440000057220459,
+      "median_v": 3.2199997901916504,
+      "clipped_fraction": 0.0,
+      "fetch_begin_pc_ns": 17410886280000,
+      "fetch_end_pc_ns": 17411122119900
+    },
+    {
+      "key": "fast",
+      "samples": 5000,
+      "fs": 100000000.0,
+      "sample_offset_s": -5e-06,
+      "duration_s": 5e-05,
+      "min_v": 0.24000000953674316,
+      "max_v": 3.4000000953674316,
+      "median_v": 2.9800000190734863,
+      "clipped_fraction": 0.0,
+      "fetch_begin_pc_ns": 17411347724000,
+      "fetch_end_pc_ns": 17412355107300
+    }
+  ],
+  "continuous": false,
+  "probe": 1,
+  "coupling": "DC",
+  "rate_requested": "100M",
+  "armed_pc_ns": 17411346510100,
+  "trigger": "CH1 falling, 1.5 V, ONCE, 10% pretrigger",
+  "triggered_after_capture": 1
+}

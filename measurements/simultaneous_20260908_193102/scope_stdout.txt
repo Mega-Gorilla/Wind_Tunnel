@@ -1,0 +1,2 @@
+SCOPE_CONTINUOUS_READY
+{"status": "completed", "source": "OWON VDS1022I CH1", "probe": 1, "coupling": "DC", "measurement_guard_v": [-0.3, 3.5], "guard_note": "Measurement envelope, NOT GPIO voltage rating. OFF DMM 3.242 V and observed OSC 2.98..3.44 V; retain clipping guard."}

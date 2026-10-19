@@ -1,0 +1,13 @@
+{
+  "gpio": 17,
+  "source": "C volatile uint32_t GPLEV0 read, dmb sy",
+  "elapsed_ns": 250000386,
+  "polls": 1972820,
+  "low": 0,
+  "high": 1972820,
+  "transition_count": 0,
+  "detection_before_mask": 0,
+  "detection_after_mask": 0,
+  "cap_reached": false,
+  "transitions": []
+}

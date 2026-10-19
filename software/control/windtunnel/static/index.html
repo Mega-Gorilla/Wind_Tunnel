@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Wind Tunnel</title><link rel="icon" href="data:,">
+ <link rel="stylesheet" href="/static/styles.css"><script src="/static/app.js" defer></script><script src="/static/touch.js" defer></script>
+</head>
+<body>
+<header>
+ <div class="brand"><span data-icon="wind" class="brand-mark"></span><div><strong>WIND TUNNEL</strong><small>風洞コントロール</small></div></div>
+ <span id="mode-badge" class="badge" title="接続モード確認中">接続確認中</span>
+ <div class="header-status"><span id="control-mode">本体操作</span><div id="system-state" class="status-pill" role="status"><span data-icon="clock"></span><span>接続待ち</span></div></div>
+ <button id="stop" class="stop" disabled><span data-icon="stop"></span>停止</button>
+</header>
+<div id="message" role="status" hidden><span id="message-icon"></span><span id="message-text"></span><button id="message-close" class="icon-button" aria-label="通知を閉じる"><span data-icon="close"></span></button></div>
+<main>
+ <section id="login" class="login">
+  <span data-icon="shield" class="empty-icon"></span><h1>風洞 制御パネル</h1>
+  <p>認証後に実測／模擬の接続モードを確認してください。</p>
+  <p>起動時に生成した <code>.runtime/local-access.html</code> を開いて認証してください。</p>
+  <p>認証済み画面を再読込するとセッションを継続します。</p>
+ </section>
+ <section id="monitor" class="page" hidden>
+  <div class="section-title"><h1><span data-icon="monitor"></span>モニター</h1><span id="freshness" class="freshness">更新待ち</span></div>
+  <div class="monitor-grid">
+   <div class="metric hero fan-metric"><div class="metric-heading"><span data-icon="fan" class="metric-symbol"></span><span>推定回転数 <small id="rpm-note">接続確認中</small></span></div><div class="metric-value"><b id="rpm">—</b><span>rpm</span></div></div>
+   <div class="metric hero pressure-metric"><div class="metric-heading"><span data-icon="pressure" class="metric-symbol"></span><span>差圧 <small id="dp-note">符号付き / SDP810</small></span></div><div class="metric-value"><b id="dp">—</b><span>Pa</span></div></div>
+   <div class="trend"><div class="trend-title"><span><span data-icon="history"></span>直近60秒</span><span class="legend"><span id="rpm-legend" class="rpm-key">回転数</span><span class="dp-key">差圧</span></span></div><svg id="trend" viewBox="0 0 420 94" role="img" aria-label="回転数と差圧の推移"><path class="gridline" d="M30 8H390 M30 44H390 M30 80H390"/><text x="0" y="12" id="rpm-axis-top">2400</text><text x="0" y="84" id="rpm-axis-bottom">0</text><text x="392" y="12" id="dp-axis-top">−20</text><text x="396" y="84" id="dp-axis-bottom">0</text><polyline id="rpm-line"/><polyline id="dp-line"/></svg></div>
+   <div class="control-readout"><div class="pwm-pair"><span><span data-icon="settings"></span>PWM指令 <b id="requested">0%</b></span><span><span data-icon="check"></span>適用設定 <b id="applied">0%</b></span></div><small>端子波形の実測値ではありません</small><div class="run-status"><span id="run-icon"></span><span id="run-progress">停止待機</span></div><progress id="run-meter" max="100" value="0" aria-label="試験の経過時間"></progress></div>
+  </div>
+  <div class="environment">
+   <div><span data-icon="thermometer"></span><div><small>温度 / 湿度</small><b id="environment">—</b></div></div>
+   <div><span data-icon="gauge"></span><div><small>気圧</small><b id="pressure">—</b></div></div>
+   <div><span data-icon="plug"></span><div><small>ファン枝路</small><b id="electrical">—</b></div></div>
+   <div><span data-icon="bolt"></span><div><small>電力</small><b id="power">—</b></div></div>
+  </div>
+  <p class="footnote" id="measurement-note">接続確認中。停止指令 ≠ 物理停止。</p>
+ </section>
+ <section id="test" class="page" hidden>
+  <p id="hardware-test-note" class="settings-card" hidden>実測モードは停止専用です。Pico・APIの両方で運転開始を拒否します。有限運転は次の工程です。</p>
+  <div class="section-title"><h1><span data-icon="test"></span>時間指定テスト</h1><span>上下にスワイプ / 数値をタップして入力</span></div>
+  <div class="toolbar"><label>試験名 <input id="test-name" value="模擬段階テスト" maxlength="80"></label><button id="preset"><span data-icon="test"></span>20→100% プリセット</button></div>
+  <div class="steps-wrap"><table><thead><tr><th>段階</th><th><span data-icon="settings"></span>出力 PWM [%]</th><th><span data-icon="clock"></span>整定待ち [s]</th><th><span data-icon="file"></span>収録 [s]</th><th><span class="sr-only">段階の削除</span></th></tr></thead><tbody id="steps"></tbody></table></div>
+  <div class="toolbar"><button id="add-step"><span data-icon="plus"></span>段階を追加</button><label><span data-icon="repeat"></span>繰返し <input id="repeat" type="number" min="1" max="5" value="1"></label><span id="duration" class="duration"></span><button id="review" class="primary"><span data-icon="check"></span>条件を確認</button></div>
+  <div id="confirmation" class="confirmation" hidden><span data-icon="shield"></span><span id="confirm-text"></span><button id="start-run" class="primary"><span data-icon="play"></span>この条件で開始</button><button id="dismiss"><span data-icon="left"></span>戻る</button></div>
+  <p class="footnote"><span data-icon="info"></span>最大300秒 / PWM 0または20–100%。整定待ちの後に収録します。定常判定は未実装です。</p>
+ </section>
+ <section id="history" class="page" hidden>
+  <div class="section-title"><h1><span data-icon="history"></span>試験履歴</h1><button id="refresh-history"><span data-icon="refresh"></span>更新</button></div>
+  <div id="history-list"></div><div class="toolbar pagination"><button id="history-prev"><span data-icon="left"></span>前へ</button><span id="history-page">1ページ</span><button id="history-next">次へ<span data-icon="right"></span></button></div>
+  <div id="run-detail" class="settings-card" hidden></div>
+ </section>
+ <section id="settings" class="page" hidden>
+  <div class="section-title"><h1><span data-icon="settings"></span>設定と診断</h1><span>本体内限定・LAN未公開</span></div>
+  <div class="settings-card"><h2>タッチ操作</h2><label class="touch-option"><input id="touch-keyboard-enabled" type="checkbox" checked> 入力欄をタップして画面キーボードを開く</label><p>画面の余白・見出し・ボタン上を上下にスワイプしてスクロールできます。停止は常に右上です。入力欄と元データ欄では文字選択を優先します。</p></div>
+  <div class="settings-card remote-card">
+   <div class="card-heading"><h2><span data-icon="shield"></span>遠隔操作の許可</h2><span id="remote-status" class="status-pill"><span id="remote-icon"></span><b id="remote-mode">OFF</b></span></div>
+   <div class="security-gates" aria-label="遠隔操作に必要な3条件"><span><span data-icon="unlock"></span>本体でON</span><b>＋</b><span><span data-icon="network"></span>許可IP</span><b>＋</b><span><span data-icon="key"></span>認証トークン</span><small>すべて必要</small></div>
+   <p id="permit-note">OFFの間は、外部から試験を開始できません。</p>
+   <div class="toolbar"><label id="remote-max-label">最大PWM <input id="remote-max" type="number" min="20" max="100" value="100">%</label><button id="remote-on" class="primary"><span data-icon="unlock"></span>ON・無期限</button><button id="remote-off" class="danger-outline"><span data-icon="lock"></span>OFF・遠隔停止</button></div>
+   <small class="hint"><span data-icon="shield"></span>時間制限なし。停止・再起動・異常・本体画面との通信断（5秒）でOFFに戻ります。</small>
+  </div>
+  <div class="settings-card"><h2><span data-icon="key"></span>APIクライアント</h2>
+   <div class="client-fields"><label>クライアント名<input id="client-name" aria-label="クライアント名" placeholder="例：実験用PC" maxlength="60"></label><label>許可IP（カンマ区切り）<input id="client-ips" aria-label="許可IP" value="127.0.0.1"></label></div>
+   <div class="toolbar"><label><input id="client-control" type="checkbox" checked> 試験の開始・停止を許可</label><button id="create-client"><span data-icon="key"></span>トークン発行</button></div>
+   <div id="token-result" hidden><label><span data-icon="warning"></span>一度だけ表示・秘密として保管<input id="new-token" readonly type="password"></label><button id="show-token"><span data-icon="eye"></span>表示切替</button><button id="hide-token"><span data-icon="close"></span>閉じる</button></div>
+   <div id="clients"></div>
+  </div>
+  <div id="hardware-details" class="settings-card" hidden><h2><span data-icon="plug"></span>Picoとセンサー</h2><p id="sensor-details"></p></div>
+  <div id="simulation-faults" class="settings-card"><h2><span data-icon="flask"></span>模擬障害テスト</h2><p>障害を適用 → 原因を解消 → 異常解除。運転は自動再開しません。</p><div class="toolbar"><select id="fault-select" aria-label="模擬障害"><option value="offline">Pico接続断</option><option value="sensor">センサー異常</option><option value="power">電源異常</option><option value="none">原因を解消</option></select><button id="inject"><span data-icon="warning"></span>模擬障害を適用</button></div></div>
+  <div class="settings-card"><button id="acknowledge"><span data-icon="check"></span>異常解除（再開なし）</button><small>通信・センサーが復旧してから解除してください。遠隔モードは自動でONに戻りません。</small></div>
+ </section>
+</main>
+<nav aria-label="画面切替">
+ <button data-page="monitor" class="selected" aria-current="page" disabled><span data-icon="monitor"></span><span>モニター</span></button>
+ <button data-page="test" disabled><span data-icon="test"></span><span>テスト</span></button>
+ <button data-page="history" disabled><span data-icon="history"></span><span>履歴</span></button>
+ <button data-page="settings" disabled><span data-icon="settings"></span><span>設定</span></button>
+</nav>
+<section id="touch-editor" class="touch-editor" role="dialog" aria-labelledby="touch-title" aria-modal="false" hidden>
+ <div class="touch-sheet">
+  <div class="touch-editor-head"><strong id="touch-title">入力</strong><input id="touch-value" type="text" inputmode="none" autocomplete="off" spellcheck="false" aria-label="編集中の値"><button id="touch-cancel" aria-label="入力画面を閉じる">閉じる</button></div>
+  <p id="touch-hint" role="status"></p>
+  <div id="touch-keys"></div>
+ </div>
+</section>
+</body></html>

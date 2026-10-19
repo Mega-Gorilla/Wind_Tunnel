@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "checked_on": "2026-10-18",
+  "sources": 4,
+  "images": 7,
+  "local_links": "valid",
+  "source_hashes": "match",
+  "image_sizes": "match",
+  "cad_document": "merged model v49",
+  "cad_modified": false,
+  "grid_holes": 25,
+  "examples": [
+    {
+      "velocity_m_s": 1,
+      "q_pa": 0.6,
+      "pressure_spec_pa": 0.098,
+      "velocity_linearized_effect_percent": 8.166666666666668
+    },
+    {
+      "velocity_m_s": 2,
+      "q_pa": 2.4,
+      "pressure_spec_pa": 0.152,
+      "velocity_linearized_effect_percent": 3.1666666666666665
+    },
+    {
+      "velocity_m_s": 3,
+      "q_pa": 5.3999999999999995,
+      "pressure_spec_pa": 0.242,
+      "velocity_linearized_effect_percent": 2.240740740740741
+    },
+    {
+      "velocity_m_s": 5,
+      "q_pa": 15.0,
+      "pressure_spec_pa": 0.5299999999999999,
+      "velocity_linearized_effect_percent": 1.7666666666666664
+    }
+  ],
+  "area_ratio_6400_to_6271": 2.052010807307947,
+  "visual_review": "7 images and 5 PDF pages inspected; diagram/graph/PID labels corrected after review",
+  "scope": "Documentation validation only; no new device measurement or control implementation"
+}

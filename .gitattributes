@@ -1,0 +1,38 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.mjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.kicad_pro text eol=lf
+*.kicad_sch text eol=lf
+*.kicad_pcb text eol=lf
+*.kicad_sym text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_dru text eol=lf
+fp-lib-table text eol=lf
+sym-lib-table text eol=lf
+# Preserve raw measurements, manufacturing files and historical hashes byte-for-byte.
+measurements/** -text
+Electronics/manufacturing/** -text
+**/gerbers/** -text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.xlsx binary
+*.f3d binary
+*.f3z binary
+*.step -text -diff
+*.stp -text -diff
+*.stl binary

@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "text": "{\n    \"message\": \"{\\\"document\\\": \\\"merged model v49\\\", \\\"modified_before\\\": false, \\\"modified_after\\\": false, \\\"bodies\\\": [{\\\"group\\\": \\\"test_section\\\", \\\"triangles\\\": 82668, \\\"bbox_error_mm\\\": 6.323830348264892e-13}, {\\\"group\\\": \\\"probe_reference\\\", \\\"triangles\\\": 3602, \\\"bbox_error_mm\\\": 1.9073486257070726e-06}, {\\\"group\\\": \\\"probe_reference\\\", \\\"triangles\\\": 1328, \\\"bbox_error_mm\\\": 1.5290125574551894e-06}, {\\\"group\\\": \\\"plate\\\", \\\"triangles\\\": 12322, \\\"bbox_error_mm\\\": 7.629395213371026e-06}]}\\n\",\n    \"success\": true\n}",
+      "type": "text"
+    }
+  ]
+}

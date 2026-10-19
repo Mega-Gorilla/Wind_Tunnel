@@ -1,0 +1,13 @@
+{
+  "client_date": "2026-10-19",
+  "artifact_checks_passed": true,
+  "failures": [],
+  "selected_solver_runs_exited_normally": true,
+  "aborted_pilot": "fitted_B_urans, intentionally terminated after pressure-iteration limit",
+  "mesh_all_extended_checks_passed": false,
+  "grid_convergence_established": false,
+  "stationary_transient_statistics_established": false,
+  "time_step_independence_established": false,
+  "physical_validation_performed": false,
+  "calibration_eligible": false
+}

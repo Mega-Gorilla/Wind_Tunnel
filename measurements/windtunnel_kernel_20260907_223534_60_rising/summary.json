@@ -1,0 +1,52 @@
+{
+  "arguments": {
+    "percent": 60,
+    "edge": "rising",
+    "settle": 20.0,
+    "seconds": 10.0
+  },
+  "output": "/tmp/windtunnel_kernel_20260907_223534_60_rising",
+  "started_utc": "2026-09-07T13:35:34.007875+00:00",
+  "gpiod_version": "2.2.0",
+  "debounce_us": 0,
+  "clock": "MONOTONIC",
+  "edge": "rising",
+  "bias": "AS_IS",
+  "model": "Raspberry Pi 3 Model B Plus Rev 1.3",
+  "status": "aborted",
+  "event_cap": 12000,
+  "burst_cap": "250 events / 50 ms",
+  "acquisition_start_utc": "2026-09-07T13:35:54.012166+00:00",
+  "gpio17_detection_registers_during_request": {
+    "LEVEL": true,
+    "EDS": false,
+    "REN": true,
+    "FEN": false,
+    "HEN": false,
+    "LEN": false,
+    "AREN": false,
+    "AFEN": false
+  },
+  "error": "Event storm / count safety cap: fan stopped early",
+  "finished_utc": "2026-09-07T13:35:54.067199+00:00",
+  "fan_final_duty_ns": "40000",
+  "fan_final_enable": "1",
+  "gpio17_detection_registers_after_release": {
+    "LEVEL": false,
+    "EDS": false,
+    "REN": false,
+    "FEN": false,
+    "HEN": false,
+    "LEN": false,
+    "AREN": false,
+    "AFEN": false
+  },
+  "acquisition_elapsed_s": 0.053714591,
+  "events": 251,
+  "rising_events": 251,
+  "falling_events": 0,
+  "sequence_gaps": 0,
+  "rising_period_min_ms": 0.008854,
+  "rising_period_median_ms": 0.0460675,
+  "rising_period_max_ms": 11.543778
+}

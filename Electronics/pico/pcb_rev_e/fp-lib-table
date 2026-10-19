@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "WindTunnel") (type "KiCad") (uri "${KIPRJMOD}/WindTunnel.pretty") (options "") (descr "Pinned carrier footprints")))

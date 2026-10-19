@@ -1,0 +1,75 @@
+{
+  "pi_saved_events": 251,
+  "pi_event_span_ms": 6.624275,
+  "pi_interval_us": {
+    "min": 0.782,
+    "median": 6.718,
+    "max": 4799.705
+  },
+  "pi_first_event_after_request_ms": 319.03717,
+  "pi_request_elapsed_ms": 330.215839,
+  "gpio17_irq_delta_by_cpu": [
+    545,
+    549,
+    509,
+    491
+  ],
+  "gpio17_irq_delta_total": 2094,
+  "scope_fs": 25000.0,
+  "scope_samples": 35316,
+  "scope_duration_s": 1.41264,
+  "scope_edges_total": {
+    "rising": 4,
+    "falling": 4
+  },
+  "scope_edges_from_first_fall_ms": [
+    [
+      0.0,
+      "fall"
+    ],
+    [
+      0.08,
+      "rise"
+    ],
+    [
+      4.96,
+      "fall"
+    ],
+    [
+      14.76,
+      "rise"
+    ],
+    [
+      24.76,
+      "fall"
+    ],
+    [
+      34.76,
+      "rise"
+    ],
+    [
+      44.84,
+      "fall"
+    ],
+    [
+      45.24,
+      "rise"
+    ]
+  ],
+  "scope_fall_intervals_ms": [
+    4.959999999999964,
+    19.80000000000004,
+    20.079999999999878
+  ],
+  "scope_low_median_v": 0.5800000429153442,
+  "scope_pulse_high_median_v": 2.740000009536743,
+  "scope_active_region_min_max_v": [
+    0.30000007152557373,
+    2.940000057220459
+  ],
+  "scope_off_median_v": 3.2199997901916504,
+  "scope_first_received_utc_ns": 1788863469739270800,
+  "scope_last_received_utc_ns": 1788863471109060000,
+  "timing_caveat": "Continuous scope covers before/during/after generator ON. PC and Pi clocks not precision-synchronized. Plot origins independent; IRQ snapshot includes processing after event cap.",
+  "generator_on_to_off_command_ms": 43.5215
+}

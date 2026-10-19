@@ -1,0 +1,5 @@
+{
+  "status": "conditional_diagnostic_only",
+  "reason": "Only the slender-cell determinant threshold may be flagged. Other extended mesh checks must pass. Same cross-section and axial stations as F_urans, without the plate.",
+  "initialization": "mapNearest from the 2026-10-18 medium_empty case as an initial guess only. The mapped data are not a newly solved result."
+}

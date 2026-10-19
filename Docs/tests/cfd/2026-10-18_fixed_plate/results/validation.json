@@ -1,0 +1,36 @@
+{
+  "artifact_integrity_checks_passed": true,
+  "physical_validation_performed": false,
+  "all_cases_strictly_converged": false,
+  "calibration_eligible": false,
+  "case_checks": [
+    {
+      "case": "coarse_empty",
+      "artifacts_consistent": true,
+      "strict_residual_target_met": true,
+      "inlet_area_mm2": 6258.571196772251,
+      "flux_imbalance_percent": 0.0
+    },
+    {
+      "case": "medium_empty",
+      "artifacts_consistent": true,
+      "strict_residual_target_met": false,
+      "inlet_area_mm2": 6266.359511299387,
+      "flux_imbalance_percent": 5.319410103769438e-08
+    },
+    {
+      "case": "coarse_repaired_plate",
+      "artifacts_consistent": true,
+      "strict_residual_target_met": false,
+      "inlet_area_mm2": 6258.571196772251,
+      "flux_imbalance_percent": 0.002560701608998416
+    },
+    {
+      "case": "medium_repaired_plate",
+      "artifacts_consistent": true,
+      "strict_residual_target_met": false,
+      "inlet_area_mm2": 6266.359511299387,
+      "flux_imbalance_percent": 0.004756084180255554
+    }
+  ]
+}

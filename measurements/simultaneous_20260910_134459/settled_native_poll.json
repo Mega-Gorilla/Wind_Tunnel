@@ -1,0 +1,12 @@
+{
+  "source": "C volatile uint32_t GPLEV0 read, dmb sy",
+  "elapsed_ns": 250000156,
+  "polls": 1980799,
+  "low": 0,
+  "high": 1980799,
+  "transition_count": 0,
+  "detection_before_mask": 0,
+  "detection_after_mask": 0,
+  "cap_reached": false,
+  "transitions": []
+}

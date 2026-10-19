@@ -1,0 +1,41 @@
+FoamFile { version 2.0; format ascii; class dictionary; object controlDict; }
+
+application simpleFoam; startFrom latestTime; startTime 0; stopAt endTime; endTime 600;
+deltaT 1; writeControl timeStep; writeInterval 100; purgeWrite 2;
+writeFormat ascii; writePrecision 9; writeCompression off; timeFormat general; timePrecision 6;
+runTimeModifiable true; functions { 
+ gridProbes { type probes; libs ("libsampling.dll"); writeControl timeStep; writeInterval 10;
+  fields (U p k); probeLocations ((-0.032000000 -0.055052966 0.032000000)
+(-0.016000000 -0.055052966 0.032000000)
+(0.000000000 -0.055052966 0.032000000)
+(0.016000000 -0.055052966 0.032000000)
+(0.032000000 -0.055052966 0.032000000)
+(-0.032000000 -0.055052966 0.016000000)
+(-0.016000000 -0.055052966 0.016000000)
+(0.000000000 -0.055052966 0.016000000)
+(0.016000000 -0.055052966 0.016000000)
+(0.032000000 -0.055052966 0.016000000)
+(-0.032000000 -0.055052966 0.000000000)
+(-0.016000000 -0.055052966 0.000000000)
+(0.000000000 -0.055052966 0.000000000)
+(0.016000000 -0.055052966 0.000000000)
+(0.032000000 -0.055052966 0.000000000)
+(-0.032000000 -0.055052966 -0.016000000)
+(-0.016000000 -0.055052966 -0.016000000)
+(0.000000000 -0.055052966 -0.016000000)
+(0.016000000 -0.055052966 -0.016000000)
+(0.032000000 -0.055052966 -0.016000000)
+(-0.032000000 -0.055052966 -0.032000000)
+(-0.016000000 -0.055052966 -0.032000000)
+(0.000000000 -0.055052966 -0.032000000)
+(0.016000000 -0.055052966 -0.032000000)
+(0.032000000 -0.055052966 -0.032000000)); }
+ inletFlux { type surfaceFieldValue; libs ("libfieldFunctionObjects.dll"); writeControl timeStep; writeInterval 10;
+  regionType patch; name inlet; operation sum; fields (phi); writeFields false; }
+ outletFlux { type surfaceFieldValue; libs ("libfieldFunctionObjects.dll"); writeControl timeStep; writeInterval 10;
+  regionType patch; name outlet; operation sum; fields (phi); writeFields false; }
+ inletP { type surfaceFieldValue; libs ("libfieldFunctionObjects.dll"); writeControl timeStep; writeInterval 10;
+  regionType patch; name inlet; operation areaAverage; fields (p); writeFields false; }
+ yPlus { type yPlus; libs ("libfieldFunctionObjects.dll"); writeControl writeTime; }
+ }
+

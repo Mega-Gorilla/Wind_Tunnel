@@ -1,0 +1,1 @@
+{"armed_pc_ns": 15688444851300, "steady_baseline": {"key": "steady_baseline", "samples": 5000, "fs": 25000.0, "sample_offset_s": -0.1, "duration_s": 0.2, "min_v": 0.5, "max_v": 2.799999952316284, "median_v": 1.6600000858306885, "clipped_fraction": 0.0, "fetch_begin_pc_ns": 15688137642400, "fetch_end_pc_ns": 15688375266800}}

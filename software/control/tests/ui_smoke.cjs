@@ -1,0 +1,154 @@
+// Runs a new isolated, headless browser; does not touch the user's Chrome tabs.
+const { chromium } = require('playwright');
+const { spawn } = require('node:child_process');
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+
+(async () => {
+  const root = path.resolve(__dirname, '..');
+  const dataDir = fs.mkdtempSync(path.join(root, '.runtime', 'ui-'));
+  const outputs = path.join(root, 'test-results');
+  fs.mkdirSync(outputs, { recursive: true });
+  const python = process.env.WT_TEST_PYTHON || path.join(root, '.venv', process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python');
+  const proc = spawn(python, ['-m', 'windtunnel', '--port', '8766', '--data-dir', dataDir], { cwd: root, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+  let serverLog = '';
+  proc.stdout.on('data', data => { serverLog += data; });
+  proc.stderr.on('data', data => { serverLog += data; });
+  let browser;
+  try {
+    for (let i = 0; i < 100; i++) {
+      try { const r = await fetch('http://127.0.0.1:8766/openapi.json'); if (r.ok) break; } catch {}
+      if (proc.exitCode != null) throw new Error('Server failed: ' + serverLog);
+      await new Promise(r => setTimeout(r, 100));
+    }
+    const access = fs.readFileSync(path.join(dataDir, 'local-access.html'), 'utf8').match(/href="([^"]+)"/)[1];
+    browser = await chromium.launch({ headless: true, ...(process.platform === 'win32' ? { channel: 'chrome' } : {}) });
+    const context = await browser.newContext({ viewport: { width: 800, height: 480 }, acceptDownloads: true });
+    const page = await context.newPage();
+    const errors = []; page.on('pageerror', e => errors.push(e.message));
+    const requests = []; page.on('request', req => requests.push(req.url()));
+    await page.goto(access);
+    await page.locator('#stop:enabled').waitFor();
+    await page.waitForFunction(() => document.getElementById('freshness').textContent.includes('2 Hz'));
+    assert.equal(new URL(page.url()).hash, '');
+    async function visibleStop() {
+      const box = await page.locator('#stop').boundingBox();
+      const viewport = page.viewportSize();
+      assert(box && box.height >= 48 && box.y >= 0 && box.y + box.height <= viewport.height);
+      assert(await page.locator('#stop').isEnabled());
+      assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      assert.equal(await page.locator('nav button[aria-current="page"]').count(),1);
+      for(const b of await page.locator('nav button').all()) assert((await b.boundingBox()).height >= 48);
+    }
+    await visibleStop();
+    await page.waitForFunction(() => [...document.querySelectorAll('nav svg use')].every(el => el.getBBox().width > 0));
+    assert.equal(await page.locator('svg.icon:not([aria-hidden="true"])').count(),0);
+    assert(await page.evaluate(() => document.querySelector('main').scrollHeight <= document.querySelector('main').clientHeight));
+    for(const b of await page.locator('button:visible').all()) {
+      assert((await b.innerText()).trim() || await b.getAttribute('aria-label'));
+    }
+    await page.screenshot({ path: path.join(outputs, 'monitor-idle-800x480.png') });
+    await page.locator('[data-page="test"]').click();
+    await page.locator('#steps input[aria-label="収録秒"]').fill('12');
+    await page.locator('#review').click();
+    let acceptedButLost;
+    await page.route('**/api/v1/runs', async route => {
+      const response = await route.fetch(); acceptedButLost = await response.json();
+      await route.abort('failed');
+    }, { times:1 });
+    await page.locator('#start-run').click();
+    await page.waitForFunction(() => document.getElementById('message').textContent.includes('同一要求'));
+    assert.equal(await page.locator('#message').getAttribute('data-tone'),'error');
+    await page.locator('#start-run:enabled').click();
+    await page.waitForFunction(() => document.getElementById('system-state').textContent.includes('試験中'));
+    const replayStatus = await page.evaluate(async () => (await fetch('/api/v1/status')).json());
+    assert.equal(replayStatus.active_run.id,acceptedButLost.id);
+    await page.waitForFunction(() => Number(document.getElementById('rpm').textContent) > 500);
+    assert.equal(await page.locator('#system-state').getAttribute('data-tone'),'running');
+    assert(await page.locator('#run-meter').evaluate(el => el.value > 0));
+    await page.screenshot({ path: path.join(outputs, 'monitor-running-800x480.png') });
+    await page.locator('#stop').click();
+    await page.waitForFunction(() => document.getElementById('system-state').textContent.includes('停止待機'));
+    assert.equal(await page.locator('#message').getAttribute('data-tone'),'success');
+    await page.locator('[data-page="history"]').click();
+    await page.locator('.history-row').waitFor();
+    assert((await page.locator('.history-row').first().innerText()).includes('中止'));
+    await page.getByRole('button', {name:'詳細',exact:true}).first().click();
+    await page.locator('#run-detail:not([hidden])').waitFor();
+    assert((await page.locator('#run-detail dl').innerText()).includes('終了理由'));
+    assert((await page.locator('#run-detail dl').innerText()).includes('停止ボタン / 停止API'));
+    assert.equal(await page.locator('#run-detail details').getAttribute('open'),null);
+    await visibleStop();
+    await page.screenshot({path:path.join(outputs,'history-detail-800x480.png')});
+    await page.locator('main').evaluate(el=>el.scrollTop=0);
+    const downloadWait = page.waitForEvent('download');
+    await page.getByRole('button', {name:'CSV',exact:true}).first().click();
+    const download = await downloadWait; await download.saveAs(path.join(outputs, 'ui-export.csv'));
+    assert(fs.readFileSync(path.join(outputs, 'ui-export.csv'),'utf8').includes('rpm_estimated'));
+    await visibleStop();
+    await page.locator('[data-page="settings"]').click();
+    await page.locator('#remote-on').click();
+    await page.waitForFunction(() => document.getElementById('remote-mode').textContent === 'ON');
+    await page.locator('#remote-off').click();
+    await page.waitForFunction(() => document.getElementById('remote-mode').textContent === 'OFF');
+    await page.locator('#client-name').fill('UI smoke client');
+    await page.locator('#create-client').click();
+    await page.locator('#new-token').waitFor();
+    assert((await page.locator('#new-token').inputValue()).length >= 32);
+    const apiToken = await page.locator('#new-token').inputValue();
+    await page.locator('#hide-token').click();
+    await page.locator('#remote-on').click();
+    await page.waitForFunction(() => document.getElementById('remote-mode').textContent === 'ON');
+    const remoteHeaders = {'Authorization':'Bearer '+apiToken,'Content-Type':'application/json'};
+    const remoteStatus = await (await fetch('http://127.0.0.1:8766/api/v1/status',{headers:remoteHeaders})).json();
+    const remoteStart = await fetch('http://127.0.0.1:8766/api/v1/runs',{method:'POST',headers:{...remoteHeaders,'Idempotency-Key':'ui-remote-test-key'},body:JSON.stringify({recipe:{name:'UI remote test',steps:[{pwm_percent:40,settle_s:1,record_s:10}]},control_epoch:remoteStatus.control_epoch,remote_permit_id:remoteStatus.remote.permit.id})});
+    assert.equal(remoteStart.status,202);
+    const remoteRun = await remoteStart.json();
+    await page.locator('#remote-off').click();
+    await page.waitForFunction(() => document.getElementById('remote-mode').textContent === 'OFF');
+    const stoppedRun = await (await fetch(`http://127.0.0.1:8766/api/v1/runs/${remoteRun.id}`,{headers:remoteHeaders})).json();
+    assert.equal(stoppedRun.state,'CANCELLED');
+    await page.getByRole('button', {name:'失効',exact:true}).click();
+    await page.waitForFunction(() => document.getElementById('clients').textContent.includes('失効済み'));
+    await page.locator('#inject').click();
+    await page.waitForFunction(() => document.getElementById('system-state').textContent.includes('異常'));
+    assert.equal(await page.locator('#system-state').getAttribute('data-tone'),'error');
+    await page.locator('#fault-select').selectOption('none');await page.locator('#inject').click();await page.locator('#acknowledge').click();
+    await page.waitForFunction(() => document.getElementById('system-state').textContent.includes('停止待機'));
+    await page.locator('main').evaluate(el=>el.scrollTop=0);
+    await visibleStop();
+    await page.screenshot({ path:path.join(outputs,'settings-800x480.png') });
+    await page.locator('[data-page="test"]').click();
+    await page.locator('#preset').click();await page.locator('#review').click();
+    await page.locator('#confirmation:not([hidden])').waitFor();
+    await visibleStop();
+    await page.screenshot({ path:path.join(outputs,'test-confirmation-800x480.png') });
+    await page.locator('#stop').click();
+    assert(await page.locator('#confirmation').isHidden());
+    await page.reload();
+    await page.locator('#stop:enabled').waitFor();
+    await page.route('**/api/v1/status',route=>route.abort('failed'));
+    await page.waitForFunction(() => document.getElementById('system-state').textContent.includes('停止未確認'));
+    assert.equal(await page.locator('#message').getAttribute('data-tone'),'error');
+    assert((await page.locator('#freshness').innerText()).includes('過去の値'));
+    assert.equal(await page.locator('#remote-mode').innerText(),'不明');
+    assert((await page.locator('#run-progress').innerText()).includes('未確認'));
+    await visibleStop();
+    await page.screenshot({path:path.join(outputs,'connection-lost-800x480.png')});
+    await page.unroute('**/api/v1/status');
+    await page.waitForFunction(() => document.getElementById('message-text').textContent.includes('通信が復旧'));
+    await page.locator('#message-close').click();
+    await page.setViewportSize({width:1280,height:800});
+    await visibleStop();
+    await page.screenshot({path:path.join(outputs,'monitor-desktop-1280x800.png')});
+    assert(requests.every(url=>url.startsWith('http://127.0.0.1:8766/')),'No CDN/external asset requests');
+    assert.equal(errors.length,0,errors.join('\n'));
+    const checks=['local bootstrap','session reload','monitor','finite start','lost start response retry does not duplicate run','stop','history CSV export','remote ON/OFF','token issue/revoke','HTTP remote start and UI OFF cancellation','fault/ack','stop accessible during confirmation','local SVG icons render with decorative semantics','active navigation and labelled touch targets','monitor fits 800x480 without scrolling','distinct success/error/running state labels','Japanese history details with collapsed JSON','connection loss and recovery feedback','desktop layout 1280x800','no external asset requests'];
+    fs.writeFileSync(path.join(outputs,'ui-result.json'),JSON.stringify({passed:true,viewports:[[800,480],[1280,800]],checks,page_errors:errors},null,2));
+    console.log(`UI smoke PASS: ${checks.length} checks, 800x480 and 1280x800, no page errors. Screenshots: test-results/`);
+  } finally {
+    if(browser)await browser.close();
+    proc.kill();
+  }
+})().catch(e=>{ console.error(e.stack); process.exitCode=1; });

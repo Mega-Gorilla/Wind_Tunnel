@@ -1,0 +1,66 @@
+{
+  "created": "2026-09-08T18:00:28.572762+09:00",
+  "read_only": true,
+  "commands": {
+    "model": {
+      "command": "cat /proc/device-tree/model",
+      "stdout": "Raspberry Pi 3 Model B Plus Rev 1.3",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "kernel": {
+      "command": "uname -r",
+      "stdout": "6.18.34+rpt-rpi-v8\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "uptime": {
+      "command": "uptime",
+      "stdout": " 18:00:30 up 26 min,  3 users,  load average: 0.00, 0.01, 0.00\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "controllers": {
+      "command": "pinctrl -l",
+      "stdout": "GPIO chips:\n  3f200000: bcm2835 (54 gpios)\n  0: firmware (8 gpios)\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "gpio17": {
+      "command": "pinctrl get 17",
+      "stdout": "17: ip    -- | lo // GPIO17 = input\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "gpio18": {
+      "command": "pinctrl get 18",
+      "stdout": "18: op -- -- | hi // GPIO18 = output\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "kernel_line_info": {
+      "command": "gpioinfo -c gpiochip0 17",
+      "stdout": "gpiochip0 17\t\"GPIO17\"        \tinput\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "boot_config": {
+      "command": "cat /boot/firmware/config.txt",
+      "stdout": "# For more options and information see\n# http://rptl.io/configtxt\n# Some settings may impact device functionality. See link above for details\n\n# Uncomment some or all of these to enable the optional hardware interfaces\n#dtparam=i2c_arm=on\n#dtparam=i2s=on\n#dtparam=spi=on\n\n# Enable audio (loads snd_bcm2835)\ndtparam=audio=on\n\n# Additional overlays and parameters are documented\n# /boot/firmware/overlays/README\n\n# Automatically load overlays for detected cameras\ncamera_auto_detect=1\n\n# Automatically load overlays for detected DSI displays\ndisplay_auto_detect=1\n\n# Automatically load initramfs files, if found\nauto_initramfs=1\n\n# Enable DRM VC4 V3D driver\ndtoverlay=vc4-kms-v3d\nmax_framebuffers=2\n\n# Don't have the firmware create an initial video= setting in cmdline.txt.\n# Use the kernel's default instead.\ndisable_fw_kms_setup=1\n\n# Run in 64-bit mode\narm_64bit=1\n\n# Disable compensation for displays with overscan\ndisable_overscan=1\n\n# Run as fast as firmware / board allows\narm_boost=1\n\n[cm4]\n# Enable host mode on the 2711 built-in XHCI USB controller.\n# This line should be removed if the legacy DWC2 controller is required\n# (e.g. for USB device mode) or if USB support is not required.\notg_mode=1\n\n[cm5]\ndtoverlay=dwc2,dr_mode=host\n\n[pi5]\ndtoverlay=nospi10\n\n[all]\n\n# WindTunnel: C1815 inverts fan PWM; GPIO18 HIGH requests fan STOP.\n# Applied by firmware, not a guarantee during power-on/reset before firmware.\ngpio=18=op,dh\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "fan_stop_unit": {
+      "command": "systemctl cat windtunnel-fan-stop.service",
+      "stdout": "# /etc/systemd/system/windtunnel-fan-stop.service\n[Unit]\nDescription=Keep WindTunnel inverted fan control at STOP on boot and shutdown\nDocumentation=https://www.raspberrypi.com/documentation/computers/config_txt.html\nDefaultDependencies=no\nAfter=local-fs.target\nBefore=sysinit.target shutdown.target\nConflicts=shutdown.target\nConditionPathExists=/usr/bin/pinctrl\n\n[Service]\nType=oneshot\nExecStart=/usr/bin/pinctrl set 18 op dh\nExecStop=/usr/bin/pinctrl set 18 op dh\nRemainAfterExit=yes\nTimeoutStartSec=5\nTimeoutStopSec=5\n\n[Install]\nWantedBy=sysinit.target\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "fan_stop_status": {
+      "command": "systemctl is-active windtunnel-fan-stop.service",
+      "stdout": "active\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  }
+}

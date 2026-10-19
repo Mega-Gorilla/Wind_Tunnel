@@ -1,0 +1,223 @@
+{
+  "time": "2026-10-17T16:22:08.855918+09:00",
+  "exchanges": [
+    {
+      "request": {
+        "cmd": "status",
+        "id": "post-fullrange-0"
+      },
+      "response": {
+        "status": {
+          "tach_level": 0,
+          "device_id": "e660583883976d2d",
+          "firmware": "0.1.0-commissioning",
+          "fan_enabled": false,
+          "rpm": null,
+          "rpm_valid": false,
+          "mode": "commissioning_locked_stop",
+          "board": "Pico RP2040 / Carrier Rev E",
+          "fan_command_percent": 0,
+          "gp16_level": 0
+        },
+        "pico_ms": 203124,
+        "ok": true,
+        "boot_id": "9445208a08549870",
+        "id": "post-fullrange-0",
+        "seq": 2
+      }
+    },
+    {
+      "request": {
+        "cmd": "scan",
+        "id": "post-fullrange-1"
+      },
+      "response": {
+        "buses": [
+          {
+            "idle_sda": 1,
+            "bus": 0,
+            "scl_gp": 1,
+            "sda_gp": 0,
+            "idle_scl": 1,
+            "addresses": [
+              "0x25"
+            ],
+            "identities": {
+              "0x25": {
+                "candidate": "SDP810-125Pa",
+                "identity_verified": false
+              }
+            },
+            "hz": 100000
+          },
+          {
+            "idle_sda": 1,
+            "bus": 1,
+            "scl_gp": 3,
+            "sda_gp": 2,
+            "idle_scl": 1,
+            "addresses": [
+              "0x40",
+              "0x77"
+            ],
+            "identities": {
+              "0x40": {
+                "ina260_id_matches": true,
+                "manufacturer_id": 21577,
+                "die_id": 8816
+              },
+              "0x77": {
+                "bme280_id_matches": true,
+                "chip_id": 96
+              }
+            },
+            "hz": 100000
+          }
+        ],
+        "pico_ms": 203152,
+        "ok": true,
+        "boot_id": "9445208a08549870",
+        "id": "post-fullrange-1",
+        "seq": 3
+      }
+    },
+    {
+      "request": {
+        "cmd": "scan",
+        "id": "post-fullrange-2"
+      },
+      "response": {
+        "buses": [
+          {
+            "idle_sda": 1,
+            "bus": 0,
+            "scl_gp": 1,
+            "sda_gp": 0,
+            "idle_scl": 1,
+            "addresses": [
+              "0x25"
+            ],
+            "identities": {
+              "0x25": {
+                "candidate": "SDP810-125Pa",
+                "identity_verified": false
+              }
+            },
+            "hz": 100000
+          },
+          {
+            "idle_sda": 1,
+            "bus": 1,
+            "scl_gp": 3,
+            "sda_gp": 2,
+            "idle_scl": 1,
+            "addresses": [
+              "0x40",
+              "0x77"
+            ],
+            "identities": {
+              "0x40": {
+                "ina260_id_matches": true,
+                "manufacturer_id": 21577,
+                "die_id": 8816
+              },
+              "0x77": {
+                "bme280_id_matches": true,
+                "chip_id": 96
+              }
+            },
+            "hz": 100000
+          }
+        ],
+        "pico_ms": 203237,
+        "ok": true,
+        "boot_id": "9445208a08549870",
+        "id": "post-fullrange-2",
+        "seq": 4
+      }
+    },
+    {
+      "request": {
+        "cmd": "scan",
+        "id": "post-fullrange-3"
+      },
+      "response": {
+        "buses": [
+          {
+            "idle_sda": 1,
+            "bus": 0,
+            "scl_gp": 1,
+            "sda_gp": 0,
+            "idle_scl": 1,
+            "addresses": [
+              "0x25"
+            ],
+            "identities": {
+              "0x25": {
+                "candidate": "SDP810-125Pa",
+                "identity_verified": false
+              }
+            },
+            "hz": 100000
+          },
+          {
+            "idle_sda": 1,
+            "bus": 1,
+            "scl_gp": 3,
+            "sda_gp": 2,
+            "idle_scl": 1,
+            "addresses": [
+              "0x40",
+              "0x77"
+            ],
+            "identities": {
+              "0x40": {
+                "ina260_id_matches": true,
+                "manufacturer_id": 21577,
+                "die_id": 8816
+              },
+              "0x77": {
+                "bme280_id_matches": true,
+                "chip_id": 96
+              }
+            },
+            "hz": 100000
+          }
+        ],
+        "pico_ms": 203321,
+        "ok": true,
+        "boot_id": "9445208a08549870",
+        "id": "post-fullrange-3",
+        "seq": 5
+      }
+    },
+    {
+      "request": {
+        "cmd": "status",
+        "id": "post-fullrange-4"
+      },
+      "response": {
+        "status": {
+          "tach_level": 0,
+          "device_id": "e660583883976d2d",
+          "firmware": "0.1.0-commissioning",
+          "fan_enabled": false,
+          "rpm": null,
+          "rpm_valid": false,
+          "mode": "commissioning_locked_stop",
+          "board": "Pico RP2040 / Carrier Rev E",
+          "fan_command_percent": 0,
+          "gp16_level": 0
+        },
+        "pico_ms": 203404,
+        "ok": true,
+        "boot_id": "9445208a08549870",
+        "id": "post-fullrange-4",
+        "seq": 6
+      }
+    }
+  ],
+  "pi_throttled": "throttled=0x0",
+  "pi_cpu_temperature": "temp=47.8'C",
+  "passed": true
+}

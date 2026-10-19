@@ -1,0 +1,204 @@
+{
+  "created": "2026-09-08T18:47:24.239733+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "write": ":SOUR1:CONT:IMM"
+    },
+    {
+      "write": ":SOUR1:COMB:FEED OFF"
+    },
+    {
+      "write": ":OUTP1:LOAD INF"
+    },
+    {
+      "write": ":SOUR1:FUNC SQU"
+    },
+    {
+      "write": ":SOUR1:FREQ:UNIT HZ"
+    },
+    {
+      "write": ":SOUR1:FREQ 50HZ"
+    },
+    {
+      "write": ":SOUR1:VOLT:UNIT VPP"
+    },
+    {
+      "write": ":SOUR1:VOLT:OFFS:UNIT V"
+    },
+    {
+      "write": ":SOUR1:VOLT 2.4VPP"
+    },
+    {
+      "write": ":SOUR1:VOLT:OFFS 1.5V"
+    },
+    {
+      "write": ":SOUR1:PULS:DCYC:UNIT PCT"
+    },
+    {
+      "write": ":SOUR1:FUNC:SQU:DCYC 50PCT"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU"
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1"
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF"
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V"
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ"
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT"
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0"
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1"
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "gpio_connected_confirmed": true,
+  "physical_condition_user_report": "generator_connected",
+  "trials": [
+    {
+      "label": "off_rising",
+      "edge": "rising",
+      "seconds": 3.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T09:47:29.858755+00:00",
+      "status": "aborted",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "registers_before": {
+        "LEVEL": false,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "initial_value": "ACTIVE",
+      "registers_during": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": true,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "acquisition_start_utc": "2026-09-08T09:47:29.862000+00:00",
+      "error": "RuntimeError('Event storm cap: >250 events/50ms or 12000 total')",
+      "registers_after": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "window_start_ns": 4379196653191,
+      "window_end_ns": 4382196653191,
+      "process_end_ns": 4379210812242,
+      "acquisition_end_utc": "2026-09-08T09:47:29.876151+00:00",
+      "count": 251,
+      "rising": 251,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 250,
+      "rising_period_median_ms": 0.0124995,
+      "rising_period_min_ms": 0.000365,
+      "rising_period_max_ms": 0.029165,
+      "all_edge_interval_median_ms": 0.0124995
+    }
+  ],
+  "requested_pull_none": false,
+  "r3_connection_user_confirmed": false,
+  "gpio_configuration_commands": [],
+  "gpio17_before": "17: ip    -- | lo // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "fan_stop_service": "active",
+  "boot_id": "b23a84fa-0a21-41aa-b947-8a12a19431ad",
+  "generator_access_skipped": false,
+  "off_only": true,
+  "poll_completed": true,
+  "poll_only": false,
+  "gpio17_after": "17: ip    -- | lo // GPIO17 = input",
+  "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+  "off_scope": true,
+  "error": "RuntimeError('OSC capture failed')",
+  "final_output1": "0",
+  "final_output2": "0"
+}

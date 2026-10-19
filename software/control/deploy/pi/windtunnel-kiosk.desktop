@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Wind Tunnel
+Comment=Start the configured local Wind Tunnel UI
+Exec=/bin/sh -ec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP; exec systemctl --user start windtunnel-kiosk.service"
+Terminal=false
+StartupNotify=false

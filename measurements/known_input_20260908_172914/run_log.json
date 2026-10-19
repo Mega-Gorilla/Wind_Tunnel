@@ -1,0 +1,24 @@
+{
+  "created": "2026-09-08T17:29:14.418820+09:00",
+  "transactions": [],
+  "gpio_connected_confirmed": true,
+  "physical_condition_user_report": "dc_low_1k_to_gnd",
+  "trials": [],
+  "wiring_user_report": {
+    "gpio17_physical_pin": 11,
+    "r3_ohm": 1000,
+    "r3_source_end": "Pi GND",
+    "r4_ohm": 10000,
+    "r4_other_end": "Pi 3.3 V",
+    "scope_ch1_tip": "GPIO17",
+    "scope_ground": "Pi GND",
+    "fan_tach": "disconnected",
+    "generator_signal": "disconnected",
+    "power_cycled_after_wiring": true,
+    "expected_nominal_voltage_v": 0.3
+  },
+  "gpio17_before": "17: ip    -- | lo // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "fan_stop_service": "active",
+  "error": "VisaIOError('VI_ERROR_RSRC_NFOUND (-1073807343): Insufficient location information or the requested device or resource is not present in the system.')"
+}

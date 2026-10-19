@@ -1,0 +1,119 @@
+{
+  "created": "2026-09-08T16:32:55.089355+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU"
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1"
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF"
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V"
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ"
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT"
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0"
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1"
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1"
+    },
+    {
+      "write": ":OUTP1:STAT 0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "gpio_connected_confirmed": true,
+  "trials": [
+    {
+      "label": "off_before",
+      "edge": "both",
+      "seconds": 3.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T07:32:57.196932+00:00",
+      "status": "aborted",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "initial_value": "ACTIVE",
+      "error": "RuntimeError('Event storm cap: >250 events/50ms or 12000 total')",
+      "window_start_ns": 4512218290503,
+      "window_end_ns": 4515218290503,
+      "process_end_ns": 4512227373749,
+      "count": 251,
+      "rising": 251,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 250,
+      "rising_period_median_ms": 0.006667,
+      "rising_period_min_ms": 0.00099,
+      "rising_period_max_ms": 0.036302,
+      "all_edge_interval_median_ms": 0.006667
+    }
+  ],
+  "gpio17_before": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "fan_stop_service": "active",
+  "error": "RuntimeError('Pi event acquisition aborted')",
+  "final_output1": "0",
+  "final_output2": "0"
+}

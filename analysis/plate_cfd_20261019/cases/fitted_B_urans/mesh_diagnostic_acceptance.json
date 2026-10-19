@@ -1,0 +1,5 @@
+{
+  "status": "conditional_diagnostic_only",
+  "reason": "May run only if the sole extended check failure is determinant < 0.001 in axially extruded slender cells. All other extended geometry checks must pass. This is not a fully quality-qualified mesh or calibration result.",
+  "required_followup": "Monitor numerical stability and convergence; quantify grid/time-step sensitivity before accepting precision claims."
+}

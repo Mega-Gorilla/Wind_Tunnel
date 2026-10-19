@@ -1,0 +1,8 @@
+{
+  "cpu_sample_s": 5,
+  "system_cpu_busy_percent_all_cores": 7.2,
+  "temperature": "temp=52.6'C",
+  "throttled": "throttled=0x80000",
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:             920         464         118          17         355         455\nSwap:            919           0         919\n",
+  "uptime_s": 184.07
+}

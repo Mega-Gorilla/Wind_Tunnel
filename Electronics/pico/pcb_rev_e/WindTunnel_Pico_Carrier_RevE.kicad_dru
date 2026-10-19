@@ -1,0 +1,15 @@
+(version 1)
+
+# Deliberate laboratory design margins, NOT a creepage/safety certification.
+# Rule order matters: the later filled-zone rule narrows only the plane gap.
+(rule "12V copper to other pads tracks and vias"
+  (condition "A.NetName == '/PWR_12V' || A.NetName == '/PI_FUSED' || A.NetName == '/FAN_FUSED' || A.NetName == '/FAN_SWITCHED' || A.NetName == '/FAN_12V'")
+  (constraint clearance (min 0.75mm)))
+
+(rule "12V copper to filled GND plane"
+  (condition "(A.NetName == '/PWR_12V' || A.NetName == '/PI_FUSED' || A.NetName == '/FAN_FUSED' || A.NetName == '/FAN_SWITCHED' || A.NetName == '/FAN_12V') && B.Type == 'Zone' && B.NetName == '/GND'")
+  (constraint clearance (min 0.50mm)))
+
+(rule "12V conductor minimum width"
+  (condition "A.NetName == '/PWR_12V' || A.NetName == '/PI_FUSED' || A.NetName == '/FAN_FUSED' || A.NetName == '/FAN_SWITCHED' || A.NetName == '/FAN_12V'")
+  (constraint track_width (min 1.50mm)))

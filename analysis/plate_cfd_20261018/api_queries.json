@@ -1,0 +1,6 @@
+[
+  {"queryType":"document","operation":"open"},
+  {"queryType":"apiDocumentation","apiCategory":"class","searchPattern":"^(TriangleMeshCalculator|TriangleMesh)$","filter":"adsk.fusion"},
+  {"queryType":"apiDocumentation","apiCategory":"member","searchPattern":"^(meshManager|bRepBodies|transform2)$","filter":"adsk.fusion.Occurrence"},
+  {"queryType":"apiDocumentation","apiCategory":"member","searchPattern":"^(createMeshCalculator|surfaceTolerance|nodeCoordinates|nodeIndices)$","filter":"adsk.fusion"}
+]

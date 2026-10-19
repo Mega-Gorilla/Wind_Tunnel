@@ -1,0 +1,3 @@
+FAST_SCOPE_ARMED 500k
+FAST_CAPTURED {"key": "fast", "samples": 5000, "fs": 500000.0, "sample_offset_s": -0.001, "duration_s": 0.01, "min_v": 0.25999999046325684, "max_v": 3.4200000762939453, "median_v": 0.5800000429153442, "clipped_fraction": 0.0, "fetch_begin_pc_ns": 17290981845500, "fetch_end_pc_ns": 17291990057700}
+{"status": "completed", "source": "OWON CH1 single shot", "continuous": false, "probe": 1, "coupling": "DC", "rate_requested": "500k", "armed_pc_ns": 17290980996600, "trigger": "CH1 falling, 1.5 V, ONCE, 10% pretrigger", "triggered_after_capture": 1}

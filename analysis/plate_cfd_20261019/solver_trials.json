@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-19",
+  "trials": [
+    {
+      "case": "fitted_B_urans",
+      "stage": "initial pilot",
+      "seed_iteration": 71,
+      "max_Co": 1,
+      "p_final_relative_tolerance": 0,
+      "p_absolute_tolerance": 1e-7,
+      "outcome": "Stopped by agent during second physical step. The first final pressure solve reached 1000 iterations but residual was 5.414e-7, above 1e-7. One step cost 147 s. This is a numerical-solver performance/convergence limitation, not evidence of physical instability.",
+      "resume_change": "Relative tolerance 0.01 for final pressure correction, maximum 200 linear iterations, maxCo=2. Physical mass conservation must be evaluated independently. Remains diagnostic, not validated."
+    }
+  ]
+}

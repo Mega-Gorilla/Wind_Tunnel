@@ -1,0 +1,224 @@
+{
+  "created": "2026-09-08T20:55:51.826942+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30",
+      "pc_ns": 17406320863100
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 17406325741800
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0",
+      "pc_ns": 17406331677300
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND",
+      "pc_ns": 17406335919100
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF",
+      "pc_ns": 17406341201900
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU",
+      "pc_ns": 17406347144700
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1",
+      "pc_ns": 17406351991200
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF",
+      "pc_ns": 17406356777200
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP",
+      "pc_ns": 17406361899700
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V",
+      "pc_ns": 17406366968500
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ",
+      "pc_ns": 17406371936800
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT",
+      "pc_ns": 17406376973900
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1",
+      "pc_ns": 17406383266100
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0",
+      "pc_ns": 17406390326500
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0",
+      "pc_ns": 17406397027400
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1",
+      "pc_ns": 17406403158500
+    },
+    {
+      "write": ":OUTP1:STAT 1",
+      "pc_ns": 17412287115900,
+      "realtime_ns": 1788868560428062500
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "1",
+      "pc_ns": 17412297598400
+    },
+    {
+      "write": ":OUTP1:STAT 0",
+      "pc_ns": 17412337491600,
+      "realtime_ns": 1788868560478569300
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 17412347371100
+    },
+    {
+      "write": ":OUTP1:STAT 0",
+      "pc_ns": 17412399262700,
+      "realtime_ns": 1788868560540465000
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 17412409666900
+    },
+    {
+      "write": ":OUTP1:STAT 0",
+      "pc_ns": 17416325995600,
+      "realtime_ns": 1788868564467034600
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 17416336204900
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 17416341032200
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0",
+      "pc_ns": 17416346267400
+    }
+  ],
+  "wiring": "WF1974 via R3 1k to GPIO17, R4 10k to 3.3V, common GND, fan Tach disconnected; unchanged user-authorized assumption",
+  "configuration_writes": "none; generator CH1 ON/OFF only",
+  "off_dmm_v_user_report": 3.242,
+  "fast_rate": "100M",
+  "guard_revision": "OFF median must agree with DMM within 0.10 V; raw envelope -0.3..3.5 V accounts for observed OFF scatter, not a GPIO absolute rating. Source remains qualified 2.4Vpp/+1.5V.",
+  "gpio17_before": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "gpioinfo": "gpiochip0 17\t\"GPIO17\"        \tinput",
+  "kernel": "Linux wind-tunnel 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64 GNU/Linux",
+  "boot_id": "b23a84fa-0a21-41aa-b947-8a12a19431ad",
+  "pad": {
+    "ranges": [
+      [
+        "0x7e000000",
+        "0x3f000000",
+        "0x1000000"
+      ],
+      [
+        "0x40000000",
+        "0x40000000",
+        "0x1000"
+      ]
+    ],
+    "cpu_address": "0x3f10002c",
+    "pad_gpio0_27": "0x1b",
+    "hysteresis_enabled": true,
+    "slew_unlimited": true,
+    "drive_code": 3,
+    "read_only": true
+  },
+  "off_before_acquiring_received_pc_ns": 17406726118800,
+  "off_before": {
+    "source": "Pi GPIO17 kernel events",
+    "status": "completed",
+    "gpiod": "2.2.0",
+    "edge": "rising",
+    "bias": "AS_IS",
+    "debounce_us": 0,
+    "start_ns": 12084074053851,
+    "start_realtime_ns": 1788868554739384034,
+    "initial_value": "ACTIVE",
+    "end_ns": 12087082447263,
+    "end_realtime_ns": 1788868557747779789,
+    "final_value": "ACTIVE",
+    "count": 0,
+    "sequence_gaps": 0
+  },
+  "on_comparison_acquiring_received_pc_ns": 17411975781700,
+  "on_comparison": {
+    "source": "Pi GPIO17 kernel events",
+    "status": "aborted",
+    "gpiod": "2.2.0",
+    "edge": "rising",
+    "bias": "AS_IS",
+    "debounce_us": 0,
+    "start_ns": 12089321943836,
+    "start_realtime_ns": 1788868559987273133,
+    "initial_value": "ACTIVE",
+    "end_ns": 12089666980814,
+    "end_realtime_ns": 1788868560332311361,
+    "final_value": "INACTIVE",
+    "error": "RuntimeError('Event storm >250 events in 50 ms')",
+    "count": 251,
+    "sequence_gaps": 0
+  },
+  "scope_status": "completed",
+  "scope_blocks": 2,
+  "off_after_acquiring_received_pc_ns": 17413060111400,
+  "off_after": {
+    "source": "Pi GPIO17 kernel events",
+    "status": "completed",
+    "gpiod": "2.2.0",
+    "edge": "rising",
+    "bias": "AS_IS",
+    "debounce_us": 0,
+    "start_ns": 12090415968927,
+    "start_realtime_ns": 1788868561081298381,
+    "initial_value": "ACTIVE",
+    "end_ns": 12093423583339,
+    "end_realtime_ns": 1788868564088917063,
+    "final_value": "ACTIVE",
+    "count": 0,
+    "sequence_gaps": 0
+  },
+  "gpio17_after": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+  "completed": true,
+  "final_output1": "0",
+  "final_output2": "0"
+}

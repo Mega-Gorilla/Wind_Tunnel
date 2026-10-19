@@ -1,0 +1,57 @@
+{
+  "run_id": "3a14397e-d762-4e37-9c33-6d7735807def",
+  "started_at": "2026-10-17T11:27:44.757208+00:00",
+  "finished_at": "2026-10-17T11:28:35.043106+00:00",
+  "all_samples": 102,
+  "valid_samples": 102,
+  "missed_acquisitions": 0,
+  "unique_sequences": 102,
+  "rows": [
+    {
+      "pwm_percent": 20,
+      "samples": 12,
+      "window_s": 6.011087,
+      "rpm": 568.9486776684483,
+      "current_ma": 20.520833333333332,
+      "voltage_v": 12.037291666666667,
+      "differential_pressure_pa": -0.9663194444444444
+    },
+    {
+      "pwm_percent": 40,
+      "samples": 12,
+      "window_s": 6.007019,
+      "rpm": 918.9250108914255,
+      "current_ma": 46.875,
+      "voltage_v": 12.032083333333334,
+      "differential_pressure_pa": -2.7461805555555556
+    },
+    {
+      "pwm_percent": 60,
+      "samples": 12,
+      "window_s": 6.007278,
+      "rpm": 1433.2614538564721,
+      "current_ma": 107.29166666666667,
+      "voltage_v": 12.02125,
+      "differential_pressure_pa": -6.999305555555556
+    },
+    {
+      "pwm_percent": 80,
+      "samples": 12,
+      "window_s": 6.016997,
+      "rpm": 1889.6469451455603,
+      "current_ma": 199.6875,
+      "voltage_v": 12.003020833333334,
+      "differential_pressure_pa": -12.53923611111111
+    },
+    {
+      "pwm_percent": 100,
+      "samples": 12,
+      "window_s": 6.009186,
+      "rpm": 2296.4840828691276,
+      "current_ma": 332.29166666666663,
+      "voltage_v": 11.979270833333333,
+      "differential_pressure_pa": -19.05
+    }
+  ],
+  "method": "record phase, valid, unmixed PWM windows; RPM=30e6*sum(edges)/sum(window_us), PPR=2 assumption"
+}

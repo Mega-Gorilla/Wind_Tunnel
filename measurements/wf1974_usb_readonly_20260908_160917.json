@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-09-08T16:09:17.512939+09:00",
+  "resource": "USB0::0x0D4A::0x000E::9184397::INSTR",
+  "pyvisa": "1.16.2",
+  "read_only": true,
+  "responses": [],
+  "error": "TypeError(\"'ResourceManager' object does not support the context manager protocol\")"
+}

@@ -1,0 +1,29 @@
+name: 測定とハードウェア検証
+description: 回路、PCB、機構、校正、実験の目的と結果を追跡する
+title: "[Test] "
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: 評価目的と合否基準
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: 装置構成と測定条件
+      description: PCB/CAD版、センサー、配線、固定板、測定位置、基準器、校正範囲を記載。
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: 手順と停止条件
+      description: 変更する接続、運転上限、異常時の対処、実行許可の範囲。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 結果と保存先
+      description: 実測・模擬・CFDを区別し、Docs/testsの報告と元データへリンク。未検証事項も記載。

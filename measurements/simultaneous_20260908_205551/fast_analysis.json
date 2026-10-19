@@ -1,0 +1,50 @@
+{
+  "source_scope": "OWON CH1 single shot",
+  "sample_rate_hz": 100000000.0,
+  "window_us": [
+    -5.0,
+    45.0
+  ],
+  "min_max_v": [
+    0.24000000953674316,
+    3.4000000953674316
+  ],
+  "edges_us_relative_scope_trigger": [
+    [
+      -0.040000000000000466,
+      "fall"
+    ],
+    [
+      6.52,
+      "rise"
+    ],
+    [
+      32.2,
+      "fall"
+    ],
+    [
+      38.08,
+      "rise"
+    ]
+  ],
+  "scope_below_1v_median": 0.3200000524520874,
+  "scope_above_2v_median": 3.1599998474121094,
+  "pi_events": 251,
+  "pi_event_span_ms": 6.709385,
+  "pi_first_event_after_request_ms": 332.836118,
+  "pi_interval_us": {
+    "min": 1.406,
+    "median": 6.614,
+    "max": 5059.656
+  },
+  "gpio17_irq_delta_cpu": [
+    562,
+    558,
+    624,
+    591
+  ],
+  "gpio17_irq_delta_total": 2335,
+  "output_on_to_off_command_ms": 50.3757,
+  "pi_acquiring_received_to_on_ms": 311.3342,
+  "timing_limit": "Single shot captures one edge after prearming; does not cover entire Pi event window. No precise scope/Pi phase synchronization."
+}

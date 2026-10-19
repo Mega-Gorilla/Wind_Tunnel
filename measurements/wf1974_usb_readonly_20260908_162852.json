@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-09-08T16:28:52.303398+09:00",
+  "resource": "USB0::0x0D4A::0x000E::9184397::INSTR",
+  "pyvisa": "1.16.2",
+  "read_only": true,
+  "responses": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1"
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ"
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "backend": "Visa Library at C:\\WINDOWS\\system32\\visa32.dll"
+}

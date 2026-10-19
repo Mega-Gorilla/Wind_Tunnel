@@ -1,0 +1,69 @@
+{
+  "summary": [
+    [
+      "CSV品目数",
+      6,
+      "CSV数量合計（個／本／枚）",
+      32,
+      "保留品目数",
+      3
+    ]
+  ],
+  "mainCheck": {
+    "recordCount": 1,
+    "truncated": false,
+    "metadata": {
+      "revision": "rx28x7",
+      "target": {
+        "id": "wb/16k7fq",
+        "beforeLines": 0,
+        "afterLines": 0
+      },
+      "kind": {
+        "requested": "table",
+        "tokens": [
+          "table"
+        ]
+      },
+      "include": {
+        "requested": "values,formulas",
+        "tokens": [
+          "values",
+          "formulas"
+        ]
+      },
+      "exclude": {
+        "tokens": []
+      },
+      "notices": []
+    }
+  },
+  "errorCheck": {
+    "recordCount": 1,
+    "truncated": false,
+    "metadata": {
+      "revision": "cxlcy2",
+      "target": {
+        "id": "wb/ithgi4",
+        "beforeLines": 0,
+        "afterLines": 0
+      },
+      "kind": {
+        "requested": "match",
+        "tokens": [
+          "match"
+        ]
+      },
+      "include": {
+        "tokens": []
+      },
+      "exclude": {
+        "tokens": []
+      },
+      "notices": []
+    }
+  },
+  "sourceVerification": "Official catalogs checked; WOS upload and current quote not tested",
+  "partCount": 9,
+  "csvRows": 6
+}

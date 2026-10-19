@@ -1,0 +1,173 @@
+{
+  "analysis_type": "Offline reanalysis; no new fan run or reference instrument capture",
+  "old_problem": "Excess counts (not merely missing pulses); cause was not established",
+  "old_32bit": {
+    "low": {
+      "source": "measurements\\simultaneous_20260911_174103\\settled_analysis.json",
+      "pi_saved_events": 251,
+      "pi_status": "aborted",
+      "pi_request_ms": 10.786069,
+      "pi_event_span_ms": 1.638895,
+      "scope_steady_min_v": 0.5,
+      "scope_steady_max_v": 0.64000004529953,
+      "scope_steady_median_v": 0.5800000429153442,
+      "scope_period_ms_median": null,
+      "python_poll_transitions": 264,
+      "native_poll_transitions": 8192
+    },
+    "high": {
+      "source": "measurements\\simultaneous_20260911_174151\\settled_analysis.json",
+      "pi_saved_events": 0,
+      "pi_status": "completed",
+      "pi_request_ms": 504.202925,
+      "pi_event_span_ms": null,
+      "scope_steady_min_v": 2.6399998664855957,
+      "scope_steady_max_v": 2.799999952316284,
+      "scope_steady_median_v": 2.740000009536743,
+      "scope_period_ms_median": null,
+      "python_poll_transitions": 0,
+      "native_poll_transitions": 0
+    },
+    "50hz": {
+      "source": "measurements\\simultaneous_20260911_174244\\settled_analysis.json",
+      "pi_saved_events": 251,
+      "pi_status": "aborted",
+      "pi_request_ms": 15.767498,
+      "pi_event_span_ms": 1.588895,
+      "scope_steady_min_v": 0.5,
+      "scope_steady_max_v": 2.799999952316284,
+      "scope_steady_median_v": 1.7000000476837158,
+      "scope_period_ms_median": 20.000000000000018,
+      "python_poll_transitions": 159,
+      "native_poll_transitions": 8192
+    }
+  },
+  "current_data": "fan_fullrange/raw.json",
+  "current_method": "Pico RP2040 PWM slice7 B falling-edge counter at GP15, divider1, TOP65535",
+  "sample_count": 134,
+  "verified_within_phase_counter_pairs": 127,
+  "initial_stopped": {
+    "sample_count": 10,
+    "duration_s": 5.013195,
+    "total_edges": 0,
+    "zero_edge_windows": 10,
+    "sampled_gpio_levels": [
+      0
+    ],
+    "counter_min": 0,
+    "counter_max": 0,
+    "window_s_min": 0.493172,
+    "window_s_max": 0.516041,
+    "frequency_hz_min": 0.0,
+    "frequency_hz_max": 0.0
+  },
+  "active": {
+    "sample_count": 100,
+    "duration_s": 50.048104,
+    "total_edges": 2243,
+    "zero_edge_windows": 1,
+    "sampled_gpio_levels": [
+      0,
+      1
+    ],
+    "counter_min": 0,
+    "counter_max": 2256,
+    "window_s_min": 0.487932,
+    "window_s_max": 0.517825,
+    "frequency_hz_min": 0.0,
+    "frequency_hz_max": 80.57189934152616
+  },
+  "active_zero_windows": [
+    {
+      "phase": 1,
+      "index": 0,
+      "command_percent": 20,
+      "stage_elapsed_ms": 565,
+      "tach_window_us": 501371,
+      "tach_level": 1
+    }
+  ],
+  "final_stopped_zero_suffix": {
+    "sample_count": 23,
+    "duration_s": 11.516693,
+    "total_edges": 0,
+    "zero_edge_windows": 23,
+    "sampled_gpio_levels": [
+      0
+    ],
+    "counter_min": 2281,
+    "counter_max": 2281,
+    "window_s_min": 0.490949,
+    "window_s_max": 0.517913,
+    "frequency_hz_min": 0.0,
+    "frequency_hz_max": 0.0
+  },
+  "stop_first_window": {
+    "tach_edges": 19,
+    "tach_window_us": 501520,
+    "tach_counter": 2281
+  },
+  "phase_tail_frequencies": [
+    {
+      "command_percent": 0,
+      "edges": 0,
+      "window_s": 1.999946,
+      "hz": 0.0,
+      "rpm_assuming_2ppr": 0.0
+    },
+    {
+      "command_percent": 20,
+      "edges": 98,
+      "window_s": 5.006958,
+      "hz": 19.572762543644263,
+      "rpm_assuming_2ppr": 587.1828763093279
+    },
+    {
+      "command_percent": 40,
+      "edges": 162,
+      "window_s": 5.009019,
+      "hz": 32.34166210988619,
+      "rpm_assuming_2ppr": 970.2498632965855
+    },
+    {
+      "command_percent": 60,
+      "edges": 248,
+      "window_s": 5.001192,
+      "hz": 49.588178178322295,
+      "rpm_assuming_2ppr": 1487.6453453496688
+    },
+    {
+      "command_percent": 80,
+      "edges": 321,
+      "window_s": 4.985929,
+      "hz": 64.38118152103651,
+      "rpm_assuming_2ppr": 1931.4354456310953
+    },
+    {
+      "command_percent": 100,
+      "edges": 389,
+      "window_s": 4.993887,
+      "hz": 77.89523471396129,
+      "rpm_assuming_2ppr": 2336.8570414188384
+    },
+    {
+      "command_percent": 0,
+      "edges": 0,
+      "window_s": 5.016067,
+      "hz": 0.0,
+      "rpm_assuming_2ppr": 0.0
+    }
+  ],
+  "conclusion": "Previously observed massive overcount was not observed on the new Pico fan setup. Functional acquisition improved; absolute accuracy and root-cause repair are not proven.",
+  "limits": [
+    "Different signal source, board, wiring and counting method; not a controlled old-vs-new accuracy comparison.",
+    "GPIO Low samples are logic-level observations, not an independent measurement of input voltage.",
+    "There is one zero-count startup window. Nonzero counts afterward do not prove zero missed pulses or zero extra edges.",
+    "Counter continuity was checked for 127 within-phase pairs. Six phase boundaries use a fresh baseline; inter-phase counts are not part of the recorded measurement windows.",
+    "No concurrent oscilloscope, optical tachometer or known-frequency reference in this run.",
+    "No known 50 Hz/DC-low stimulus test was performed on Pico.",
+    "The saved commissioning firmware still reports rpm=null; temporary diagnostics implement counting only.",
+    "Window aggregation has roughly one-edge granularity: about 60 rpm at 0.5 s, 6 rpm at 5 s (2 ppr). This is not total measurement accuracy."
+  ],
+  "official_reference": "https://www.raspberrypi.com/documentation/pico-sdk/hardware.html#hardware_pwm"
+}

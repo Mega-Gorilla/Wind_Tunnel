@@ -1,0 +1,2 @@
+SCOPE_CONTINUOUS_READY
+{"status": "aborted", "source": "OWON VDS1022I CH1", "probe": 1, "coupling": "DC", "error": "RuntimeError('Voltage/clipping guard')"}

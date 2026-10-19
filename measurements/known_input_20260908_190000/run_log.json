@@ -1,0 +1,272 @@
+{
+  "created": "2026-09-08T19:00:00.289550+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU"
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1"
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF"
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V"
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ"
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT"
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0"
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1"
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "gpio_connected_confirmed": true,
+  "physical_condition_user_report": "generator_connected",
+  "trials": [
+    {
+      "label": "off_rising",
+      "edge": "rising",
+      "seconds": 3.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T10:00:04.071058+00:00",
+      "status": "completed",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "registers_before": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "initial_value": "ACTIVE",
+      "registers_during": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": true,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "acquisition_start_utc": "2026-09-08T10:00:04.073098+00:00",
+      "final_value": "ACTIVE",
+      "registers_after": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "window_start_ns": 5133407761125,
+      "window_end_ns": 5136407761125,
+      "process_end_ns": 5136408857049,
+      "acquisition_end_utc": "2026-09-08T10:00:07.074198+00:00",
+      "count": 0,
+      "rising": 0,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 0
+    },
+    {
+      "label": "off_falling",
+      "edge": "falling",
+      "seconds": 3.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T10:00:07.570196+00:00",
+      "status": "completed",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "registers_before": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "initial_value": "ACTIVE",
+      "registers_during": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": true,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "acquisition_start_utc": "2026-09-08T10:00:07.572254+00:00",
+      "final_value": "ACTIVE",
+      "registers_after": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "window_start_ns": 5136906917196,
+      "window_end_ns": 5139906917196,
+      "process_end_ns": 5139907552764,
+      "acquisition_end_utc": "2026-09-08T10:00:10.572890+00:00",
+      "count": 0,
+      "rising": 0,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 0
+    },
+    {
+      "label": "off_both",
+      "edge": "both",
+      "seconds": 3.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T10:00:11.040345+00:00",
+      "status": "completed",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "registers_before": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "initial_value": "ACTIVE",
+      "registers_during": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": true,
+        "FEN": true,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "acquisition_start_utc": "2026-09-08T10:00:11.042457+00:00",
+      "final_value": "ACTIVE",
+      "registers_after": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "window_start_ns": 5140377121142,
+      "window_end_ns": 5143377121142,
+      "process_end_ns": 5143378143791,
+      "acquisition_end_utc": "2026-09-08T10:00:14.043485+00:00",
+      "count": 0,
+      "rising": 0,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 0
+    }
+  ],
+  "requested_pull_none": false,
+  "r3_connection_user_confirmed": false,
+  "gpio_configuration_commands": [],
+  "gpio17_before": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "fan_stop_service": "active",
+  "boot_id": "b23a84fa-0a21-41aa-b947-8a12a19431ad",
+  "generator_access_skipped": false,
+  "off_only": true,
+  "poll_completed": true,
+  "poll_only": false,
+  "gpio17_after": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+  "off_scope": false,
+  "completed": true,
+  "final_output1": "0",
+  "final_output2": "0"
+}

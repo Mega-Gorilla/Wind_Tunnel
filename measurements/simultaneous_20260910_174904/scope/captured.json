@@ -1,0 +1,1 @@
+{"key": "fast", "samples": 5000, "fs": 100000000.0, "sample_offset_s": -2.5e-05, "duration_s": 5e-05, "min_v": 0.5200000405311584, "max_v": 0.64000004529953, "median_v": 0.5800000429153442, "clipped_fraction": 0.0, "fetch_begin_pc_ns": 15321799759400, "fetch_end_pc_ns": 15321807217200}

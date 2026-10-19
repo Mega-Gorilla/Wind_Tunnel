@@ -1,0 +1,9 @@
+{
+  "2026-10-18T08:36Z": {
+    "cases": ["coarse_repaired_plate", "medium_repaired_plate"],
+    "change": "SIMPLE nNonOrthogonalCorrectors from 1 to 0 during initial convergence",
+    "reason": "Standard meshes have maximum non-orthogonality below 61 degrees and limited non-orthogonal correction. Further correction is handled in subsequent SIMPLE iterations; assess mass balance and engineering-output stability.",
+    "boundary_conditions_changed": false,
+    "approximate_iteration_before_change": {"coarse_repaired_plate": 145, "medium_repaired_plate": 35}
+  }
+}

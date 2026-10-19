@@ -1,0 +1,28 @@
+name: 不具合報告
+description: 模擬または実機で確認した問題を記録する
+title: "[Bug] "
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境と版
+      description: コミット、OS、UI/Picoの版、PCB版、実機か模擬かを記載。トークン・パスワード・接続メモを添付しないでください。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順と実際の結果
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した結果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 証拠と安全状態
+      description: 秘密情報を除いたログ、run ID、画像、ファン停止確認の有無。

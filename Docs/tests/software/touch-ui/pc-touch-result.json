@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "checks": [
+    "mouse-emulated finger scrolls settings up and down",
+    "drag from remote ON does not activate it; immediate stop remains usable",
+    "table scroll has no nested vertical trap and does not delete a row",
+    "numeric keypad buffers edits and commits through existing validation flow",
+    "range and unverified low PWM rejected; stop discards pending edits",
+    "drag beginning on start button never submits a run",
+    "text/symbol keyboard and navigation cancellation",
+    "optional screen keyboard setting persists after reload",
+    "native touch swipe works and stop stays fixed",
+    "no start or permission request; no JavaScript errors"
+  ],
+  "page_errors": [],
+  "final": {
+    "simulation": true,
+    "device": "simulated_pico",
+    "fan_control_available": true,
+    "state": "IDLE",
+    "acknowledging": false,
+    "fault": null,
+    "control_epoch": 2,
+    "pwm_requested_percent": 0,
+    "active_run": null,
+    "remote": {
+      "enabled": false,
+      "permit": null
+    },
+    "ui_alive": true,
+    "telemetry": {
+      "simulation": true,
+      "source": "simulated_pico",
+      "seq": 13,
+      "monotonic_s": 27561.343,
+      "connected": true,
+      "valid": true,
+      "reason": null,
+      "pwm_applied_percent": 0,
+      "rpm_estimated": 0,
+      "pulses_per_revolution_assumed": 2,
+      "differential_pressure_pa": 0,
+      "temperature_c": 27.088756159468748,
+      "relative_humidity_percent": 36,
+      "ambient_pressure_pa": 102350,
+      "bus_voltage_v": 12,
+      "current_a": 0.004,
+      "power_w": 0.048,
+      "airspeed_m_s": null,
+      "airspeed_reason": "pressure_mapping_and_calibration_pending",
+      "sw1_position": "unknown",
+      "settled": null,
+      "received_at": "2026-10-17T11:40:36.508644+00:00",
+      "age_ms": 31.9999999992433
+    },
+    "stop_note": "設定値0と羽根の物理停止は別。表示はすべて模擬値です。"
+  }
+}

@@ -1,0 +1,5 @@
+[
+  {"queryType":"document","operation":"open"},
+  {"queryType":"apiDocumentation","apiCategory":"member","searchPattern":"^(allOccurrences|bRepBodies|boundingBox|geometry|area|isModified|versionNumber)$","filter":"adsk.fusion"},
+  {"queryType":"apiDocumentation","apiCategory":"class","searchPattern":"^(Plane|Cylinder)$","filter":"adsk.core"}
+]

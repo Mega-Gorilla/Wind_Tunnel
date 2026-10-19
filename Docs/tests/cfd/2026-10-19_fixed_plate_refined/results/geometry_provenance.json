@@ -1,0 +1,30 @@
+{
+  "client_date": "2026-10-19",
+  "document": "merged model v49 (saved export, read-only)",
+  "files": [
+    {
+      "path": "analysis\\plate_cfd_20261018\\geometry\\fusion_geometry.json",
+      "sha256": "93646c4b4aca00d4305a7ecbce2e83ce18b977529a648b72f5f4b050d574814c"
+    },
+    {
+      "path": "analysis\\plate_cfd_20261018\\geometry\\plate-3.stl",
+      "sha256": "134bc245ec056a91ec83d1101337b3cb2bbb8c9e897b5e18ace58b3c02b82dd4"
+    },
+    {
+      "path": "analysis\\plate_cfd_20261018\\geometry\\test_section-0.stl",
+      "sha256": "6341a4f18d28bdbdd485ca7e50941b421e0fe84b8a7b26f001f0cb9f75cd84bd"
+    },
+    {
+      "path": "analysis\\plate_cfd_20261019\\meshes\\fitted_B\\section.npz",
+      "sha256": "9f479cb4f841b85ea7cf83dfddccbcdd132242189824203be29ac43c45798bfb"
+    },
+    {
+      "path": "analysis\\plate_cfd_20261019\\mesh_section.py",
+      "sha256": "afac9c7bcab429e5e83ea90e28616aa6e9359b7e1fc45d8040c03caae85ce904"
+    },
+    {
+      "path": "analysis\\plate_cfd_20261019\\build_fitted.py",
+      "sha256": "8b7f16bd01528886c711693fdb0456ee6b2f95cef1bd17dc0dd1a91e31d24b67"
+    }
+  ]
+}

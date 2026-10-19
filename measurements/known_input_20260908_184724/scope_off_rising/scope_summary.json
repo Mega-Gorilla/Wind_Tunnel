@@ -1,0 +1,23 @@
+[
+  {
+    "key": "period_0",
+    "fs": 25000.0,
+    "samples": 5000,
+    "duration_s": 0.2,
+    "fetch_begin": "2026-09-08T18:47:29.083813+09:00",
+    "fetch_end": "2026-09-08T18:47:29.315677+09:00",
+    "min_v": -0.5199999809265137,
+    "max_v": 4.0,
+    "low_v": -0.24000000953674316,
+    "high_v": 4.0,
+    "rising_edges": 1162,
+    "falling_edges": 1162,
+    "frequency_hz": 6249.999999999999,
+    "duty_pct": 66.84,
+    "clipped_fraction": 0.4272,
+    "range_v": 5.0,
+    "offset": 0.2,
+    "probe": 1,
+    "coupling": "DC"
+  }
+]

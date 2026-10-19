@@ -1,0 +1,24 @@
+{
+  "case": "coarse_empty",
+  "solver": "simpleFoam",
+  "nominal_velocity_ms": 3,
+  "rho_kgm3": 1.2,
+  "nu_m2s": 1.5e-05,
+  "inlet_ti": 0.01,
+  "turbulence_length_m": 0.005,
+  "base_mm": 5,
+  "plate_surface_cell_mm": 0.625,
+  "duct_contour_area_mm2": 6271.1684387305295,
+  "plate_present": false,
+  "probe_present": false,
+  "upstream_m": 0.2,
+  "downstream_m": 0.2,
+  "probe_plane_m": -0.055052965769097906,
+  "model": "steady kOmegaSST RANS",
+  "limitations": [
+    "Constant-section surrogate, not full tunnel/fan",
+    "0.2 mm peripheral gaps may be underresolved",
+    "No Pitot probe body; no static-port calibration",
+    "Steady RANS does not resolve vortex shedding"
+  ]
+}

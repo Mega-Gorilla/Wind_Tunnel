@@ -1,0 +1,57 @@
+{
+  "fitted_B_plate": {
+    "log": "cases\\fitted_B_plate\\log.checkMesh.1792383290746405100",
+    "cells": 1060170.0,
+    "max_nonorthogonality_deg": 49.61528736,
+    "max_skewness": 1.348161896,
+    "max_aspect_ratio": 654.6793537,
+    "small_determinant_cells": 237477.0,
+    "concave_check_pass": true,
+    "full_mesh_pass": false,
+    "one_failed_check": true
+  },
+  "fitted_F_urans": {
+    "log": "cases\\fitted_F_urans\\log.checkMesh.1792384599100323900",
+    "cells": 1060170.0,
+    "max_nonorthogonality_deg": 49.61528736,
+    "max_skewness": 1.348161896,
+    "max_aspect_ratio": 491.0095152,
+    "small_determinant_cells": 238220.0,
+    "concave_check_pass": true,
+    "full_mesh_pass": false,
+    "one_failed_check": true
+  },
+  "fitted_F_empty": {
+    "log": "cases\\fitted_F_empty\\log.checkMesh.1792384818711228500",
+    "cells": 1127951.0,
+    "max_nonorthogonality_deg": 49.61528736,
+    "max_skewness": 1.061657091,
+    "max_aspect_ratio": 491.0095152,
+    "small_determinant_cells": 238218.0,
+    "concave_check_pass": true,
+    "full_mesh_pass": false,
+    "one_failed_check": true
+  },
+  "linux_F_urans": {
+    "log": "cases\\linux_F_urans\\log.checkMesh.1792386011490822000",
+    "cells": 1060170.0,
+    "max_nonorthogonality_deg": 49.61528736,
+    "max_skewness": 1.348161896,
+    "max_aspect_ratio": 491.0095152,
+    "small_determinant_cells": 238220.0,
+    "concave_check_pass": true,
+    "full_mesh_pass": false,
+    "one_failed_check": true
+  },
+  "linux_F_empty_urans": {
+    "log": "cases\\linux_F_empty_urans\\log.checkMesh.1792386100388014000",
+    "cells": 1127951.0,
+    "max_nonorthogonality_deg": 49.61528736,
+    "max_skewness": 1.061657091,
+    "max_aspect_ratio": 491.0095152,
+    "small_determinant_cells": 238218.0,
+    "concave_check_pass": true,
+    "full_mesh_pass": false,
+    "one_failed_check": true
+  }
+}

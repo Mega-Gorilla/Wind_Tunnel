@@ -1,0 +1,175 @@
+{
+  "caveat": "Different OpenFOAM builds and adaptive time steps; not a controlled operating-system-only speedup benchmark.",
+  "cases": {
+    "fitted_B_urans_renumbered": {
+      "build": "34e226dfe3-20211220 OPENFOAM=2606 version=v2606",
+      "first_six_steps": [
+        {
+          "physical_time_s": 3.086419753e-05,
+          "wall_clock_s": 20.0
+        },
+        {
+          "physical_time_s": 6.172839506e-05,
+          "wall_clock_s": 40.0
+        },
+        {
+          "physical_time_s": 9.259259259e-05,
+          "wall_clock_s": 55.0
+        },
+        {
+          "physical_time_s": 0.0001234567901,
+          "wall_clock_s": 71.0
+        },
+        {
+          "physical_time_s": 0.0001543209877,
+          "wall_clock_s": 80.0
+        },
+        {
+          "physical_time_s": 0.0001851851852,
+          "wall_clock_s": 93.0
+        }
+      ],
+      "last_step": {
+        "physical_time_s": 0.002,
+        "wall_clock_s": 349.0
+      },
+      "completed_steps": 66
+    },
+    "linux_B_urans": {
+      "build": "_481094f-20260618 OPENFOAM=2606 version=2606",
+      "first_six_steps": [
+        {
+          "physical_time_s": 3.125e-05,
+          "wall_clock_s": 18.0
+        },
+        {
+          "physical_time_s": 6.25e-05,
+          "wall_clock_s": 34.0
+        },
+        {
+          "physical_time_s": 9.375e-05,
+          "wall_clock_s": 47.0
+        },
+        {
+          "physical_time_s": 0.000125,
+          "wall_clock_s": 60.0
+        },
+        {
+          "physical_time_s": 0.00015625,
+          "wall_clock_s": 68.0
+        },
+        {
+          "physical_time_s": 0.0001875,
+          "wall_clock_s": 78.0
+        }
+      ],
+      "last_step": {
+        "physical_time_s": 0.0001875,
+        "wall_clock_s": 78.0
+      },
+      "completed_steps": 6
+    },
+    "fitted_F_urans": {
+      "build": "34e226dfe3-20211220 OPENFOAM=2606 version=v2606",
+      "first_six_steps": [
+        {
+          "physical_time_s": 4.273504274e-05,
+          "wall_clock_s": 22.0
+        },
+        {
+          "physical_time_s": 9.384086704e-05,
+          "wall_clock_s": 33.0
+        },
+        {
+          "physical_time_s": 0.0001544107329,
+          "wall_clock_s": 46.0
+        },
+        {
+          "physical_time_s": 0.0002246366643,
+          "wall_clock_s": 56.0
+        },
+        {
+          "physical_time_s": 0.0003042260532,
+          "wall_clock_s": 69.0
+        },
+        {
+          "physical_time_s": 0.0003928255616,
+          "wall_clock_s": 79.0
+        }
+      ],
+      "last_step": {
+        "physical_time_s": 0.01126998051,
+        "wall_clock_s": 1084.0
+      },
+      "completed_steps": 232
+    },
+    "linux_F_urans": {
+      "build": "_481094f-20260618 OPENFOAM=2606 version=2606",
+      "first_six_steps": [
+        {
+          "physical_time_s": 0.01131353452,
+          "wall_clock_s": 9.0
+        },
+        {
+          "physical_time_s": 0.01135705058,
+          "wall_clock_s": 12.0
+        },
+        {
+          "physical_time_s": 0.01140056665,
+          "wall_clock_s": 21.0
+        },
+        {
+          "physical_time_s": 0.01144408272,
+          "wall_clock_s": 27.0
+        },
+        {
+          "physical_time_s": 0.01148763683,
+          "wall_clock_s": 35.0
+        },
+        {
+          "physical_time_s": 0.01153115286,
+          "wall_clock_s": 40.0
+        }
+      ],
+      "last_step": {
+        "physical_time_s": 0.01501144214,
+        "wall_clock_s": 764.0
+      },
+      "completed_steps": 88
+    },
+    "linux_F_empty_urans": {
+      "build": "_481094f-20260618 OPENFOAM=2606 version=2606",
+      "first_six_steps": [
+        {
+          "physical_time_s": 0.0001199040767,
+          "wall_clock_s": 26.0
+        },
+        {
+          "physical_time_s": 0.0002645268401,
+          "wall_clock_s": 51.0
+        },
+        {
+          "physical_time_s": 0.0004380741561,
+          "wall_clock_s": 80.0
+        },
+        {
+          "physical_time_s": 0.0006333148866,
+          "wall_clock_s": 108.0
+        },
+        {
+          "physical_time_s": 0.0008610957388,
+          "wall_clock_s": 132.0
+        },
+        {
+          "physical_time_s": 0.001145821804,
+          "wall_clock_s": 155.0
+        }
+      ],
+      "last_step": {
+        "physical_time_s": 0.002,
+        "wall_clock_s": 234.0
+      },
+      "completed_steps": 9
+    }
+  }
+}

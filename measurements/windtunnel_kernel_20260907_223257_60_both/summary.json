@@ -1,0 +1,29 @@
+{
+  "arguments": {
+    "percent": 60,
+    "edge": "both",
+    "settle": 20.0,
+    "seconds": 15.0
+  },
+  "output": "/tmp/windtunnel_kernel_20260907_223257_60_both",
+  "started_utc": "2026-09-07T13:32:57.680903+00:00",
+  "gpiod_version": "2.2.0",
+  "debounce_us": 0,
+  "clock": "MONOTONIC",
+  "edge": "both",
+  "bias": "AS_IS",
+  "model": "Raspberry Pi 3 Model B Plus Rev 1.3",
+  "status": "aborted",
+  "event_cap": 12000,
+  "burst_cap": "250 events / 50 ms",
+  "acquisition_start_utc": "2026-09-07T13:33:17.685179+00:00",
+  "error": "Event storm / count safety cap: fan stopped early",
+  "finished_utc": "2026-09-07T13:33:17.706403+00:00",
+  "fan_final_duty_ns": "40000",
+  "fan_final_enable": "1",
+  "acquisition_elapsed_s": 0.019946012,
+  "events": 251,
+  "rising_events": 0,
+  "falling_events": 251,
+  "sequence_gaps": 0
+}

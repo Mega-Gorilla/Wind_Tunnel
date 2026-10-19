@@ -1,0 +1,251 @@
+{
+  "started_at": "2026-10-15T17:46:34.470+09:00",
+  "finished_at": "2026-10-15T17:47:03.694+09:00",
+  "samples_count": 52,
+  "crc_errors": 0,
+  "phases": [
+    {
+      "phase": 0,
+      "command_percent": 0,
+      "selected_indices": [
+        4,
+        5
+      ],
+      "tach_edges": 0,
+      "tach_window_s": 0.999178,
+      "tach_hz": 0.0,
+      "rpm_assuming_2ppr": 0.0,
+      "metrics": {
+        "current_ma": {
+          "mean": 3.75,
+          "min": 3.75,
+          "max": 3.75
+        },
+        "bus_voltage_v": {
+          "mean": 12.025625000000002,
+          "min": 12.025,
+          "max": 12.026250000000001
+        },
+        "power_w": {
+          "mean": 0.055,
+          "min": 0.05,
+          "max": 0.06
+        },
+        "differential_pressure_pa": {
+          "mean": -0.004166666666666667,
+          "min": -0.008333333333333333,
+          "max": 0.0
+        }
+      }
+    },
+    {
+      "phase": 1,
+      "command_percent": 20,
+      "selected_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "tach_edges": 49,
+      "tach_window_s": 3.013992,
+      "tach_hz": 16.25750831455425,
+      "rpm_assuming_2ppr": 487.7252494366275,
+      "metrics": {
+        "current_ma": {
+          "mean": 19.791666666666668,
+          "min": 16.25,
+          "max": 21.25
+        },
+        "bus_voltage_v": {
+          "mean": 12.022916666666667,
+          "min": 12.0225,
+          "max": 12.02375
+        },
+        "power_w": {
+          "mean": 0.23833333333333334,
+          "min": 0.19,
+          "max": 0.26
+        },
+        "differential_pressure_pa": {
+          "mean": -0.06875,
+          "min": -0.08333333333333333,
+          "max": -0.05416666666666667
+        }
+      }
+    },
+    {
+      "phase": 2,
+      "command_percent": 40,
+      "selected_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "tach_edges": 73,
+      "tach_window_s": 3.007017,
+      "tach_hz": 24.276550481756505,
+      "rpm_assuming_2ppr": 728.2965144526952,
+      "metrics": {
+        "current_ma": {
+          "mean": 36.666666666666664,
+          "min": 33.75,
+          "max": 41.25
+        },
+        "bus_voltage_v": {
+          "mean": 12.019375,
+          "min": 12.01875,
+          "max": 12.02
+        },
+        "power_w": {
+          "mean": 0.44333333333333336,
+          "min": 0.4,
+          "max": 0.5
+        },
+        "differential_pressure_pa": {
+          "mean": -0.15763888888888888,
+          "min": -0.17916666666666667,
+          "max": -0.125
+        }
+      }
+    },
+    {
+      "phase": 3,
+      "command_percent": 60,
+      "selected_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "tach_edges": 114,
+      "tach_window_s": 2.999723,
+      "tach_hz": 38.00350899066347,
+      "rpm_assuming_2ppr": 1140.105269719904,
+      "metrics": {
+        "current_ma": {
+          "mean": 85.20833333333333,
+          "min": 77.5,
+          "max": 96.25
+        },
+        "bus_voltage_v": {
+          "mean": 12.009791666666667,
+          "min": 12.00625,
+          "max": 12.01375
+        },
+        "power_w": {
+          "mean": 1.0233333333333334,
+          "min": 0.92,
+          "max": 1.16
+        },
+        "differential_pressure_pa": {
+          "mean": -0.4027777777777778,
+          "min": -0.4791666666666667,
+          "max": -0.32083333333333336
+        }
+      }
+    },
+    {
+      "phase": 4,
+      "command_percent": 0,
+      "selected_indices": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "tach_edges": 0,
+      "tach_window_s": 2.002457,
+      "tach_hz": 0.0,
+      "rpm_assuming_2ppr": 0.0,
+      "metrics": {
+        "current_ma": {
+          "mean": 3.75,
+          "min": 3.75,
+          "max": 3.75
+        },
+        "bus_voltage_v": {
+          "mean": 12.025625000000002,
+          "min": 12.025,
+          "max": 12.026250000000001
+        },
+        "power_w": {
+          "mean": 0.05,
+          "min": 0.05,
+          "max": 0.05
+        },
+        "differential_pressure_pa": {
+          "mean": -0.009375,
+          "min": -0.020833333333333332,
+          "max": 0.0
+        }
+      }
+    }
+  ],
+  "final_tach_zero_in_selected_window": true,
+  "before": {
+    "status": {
+      "tach_level": 0,
+      "device_id": "e660583883976d2d",
+      "firmware": "0.1.0-commissioning",
+      "fan_enabled": false,
+      "rpm": null,
+      "rpm_valid": false,
+      "mode": "commissioning_locked_stop",
+      "board": "Pico RP2040 / Carrier Rev E",
+      "fan_command_percent": 0,
+      "gp16_level": 0
+    },
+    "pico_ms": 4116802,
+    "ok": true,
+    "boot_id": "f300252a536e16e4",
+    "id": "fan-before",
+    "seq": 2
+  },
+  "after": {
+    "status": {
+      "tach_level": 0,
+      "device_id": "e660583883976d2d",
+      "firmware": "0.1.0-commissioning",
+      "fan_enabled": false,
+      "rpm": null,
+      "rpm_valid": false,
+      "mode": "commissioning_locked_stop",
+      "board": "Pico RP2040 / Carrier Rev E",
+      "fan_command_percent": 0,
+      "gp16_level": 0
+    },
+    "pico_ms": 1341,
+    "ok": true,
+    "boot_id": "89af19b9ddcc7805",
+    "id": "fan-after",
+    "seq": 1
+  },
+  "done": {
+    "command_percent": 0,
+    "pico_ms": 4144419,
+    "next_action": "hard_reset_to_existing_locked_stop_firmware",
+    "gp16_level": 0,
+    "kind": "done",
+    "ina_restored_config": 24871,
+    "errors": []
+  },
+  "notes": [
+    "Tach: RP2040 PWM slice 7 B falling-edge hardware counter on GP15.",
+    "GP15 output is explicitly disabled by OEOVER throughout counting.",
+    "RPM assumes two Tach pulses/revolution; not independently calibrated.",
+    "Running rows exclude the first approximately two seconds of each step.",
+    "Final stop summary uses the last approximately two seconds.",
+    "Duty is the software command at GP16, not an oscilloscope measurement at the fan.",
+    "SDP pressure is signed raw calibrated output; no zero subtraction or wind-speed conversion.",
+    "Negative pressure can result from pressure-port/tube conditions; cause not established.",
+    "Temporary RAM code; fan reset to locked-stop firmware; no permanent run commands installed."
+  ]
+}

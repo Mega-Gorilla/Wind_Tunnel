@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "viewport": [
+    800,
+    480
+  ],
+  "checks": [
+    "local bootstrap",
+    "session reload",
+    "monitor",
+    "finite start",
+    "lost start response retry does not duplicate run",
+    "stop",
+    "history CSV export",
+    "remote ON/OFF",
+    "token issue/revoke",
+    "HTTP remote start and UI OFF cancellation",
+    "fault/ack",
+    "stop accessible during confirmation"
+  ],
+  "page_errors": []
+}

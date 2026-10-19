@@ -1,0 +1,18 @@
+[Unit]
+Description=Wind Tunnel sensor monitor or simulator and local kiosk
+After=graphical-session.target
+StartLimitIntervalSec=120
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=%h/windtunnel-control/current
+ExecStart=/usr/bin/python3 %h/windtunnel-control/current/deploy/pi/kiosk.py
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+StandardOutput=append:%h/windtunnel-control/evidence/kiosk.log
+StandardError=append:%h/windtunnel-control/evidence/kiosk.log
+Restart=on-failure
+RestartSec=5
+KillMode=mixed
+TimeoutStopSec=25

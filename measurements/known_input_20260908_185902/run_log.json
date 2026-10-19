@@ -1,0 +1,228 @@
+{
+  "created": "2026-09-08T18:59:02.928282+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU"
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1"
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF"
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V"
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ"
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT"
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0"
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0"
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1"
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1"
+    },
+    {
+      "write": ":OUTP1:STAT 1"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "1"
+    },
+    {
+      "write": ":OUTP1:STAT 0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "gpio_connected_confirmed": true,
+  "physical_condition_user_report": "generator_connected",
+  "trials": [
+    {
+      "label": "off_before",
+      "edge": "both",
+      "seconds": 3.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T09:59:06.462496+00:00",
+      "status": "completed",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "registers_before": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "initial_value": "ACTIVE",
+      "registers_during": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": true,
+        "FEN": true,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "acquisition_start_utc": "2026-09-08T09:59:06.464516+00:00",
+      "final_value": "ACTIVE",
+      "registers_after": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "window_start_ns": 5075799179691,
+      "window_end_ns": 5078799179691,
+      "process_end_ns": 5078800255913,
+      "acquisition_end_utc": "2026-09-08T09:59:09.465596+00:00",
+      "count": 0,
+      "rising": 0,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 0
+    },
+    {
+      "label": "rising_1",
+      "edge": "rising",
+      "seconds": 10.0,
+      "gpiod": "2.2.0",
+      "timestamp_utc": "2026-09-08T09:59:12.784746+00:00",
+      "status": "aborted",
+      "debounce_us": 0,
+      "bias": "AS_IS",
+      "clock": "MONOTONIC",
+      "source": "Pi GPIO17 kernel events",
+      "registers_before": {
+        "LEVEL": false,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "initial_value": "INACTIVE",
+      "registers_during": {
+        "LEVEL": false,
+        "EDS": false,
+        "REN": true,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "acquisition_start_utc": "2026-09-08T09:59:12.787117+00:00",
+      "error": "RuntimeError('Event storm cap: >250 events/50ms or 12000 total')",
+      "registers_after": {
+        "LEVEL": true,
+        "EDS": false,
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "window_start_ns": 5082121773661,
+      "window_end_ns": 5092121773661,
+      "process_end_ns": 5082130344123,
+      "acquisition_end_utc": "2026-09-08T09:59:12.795680+00:00",
+      "count": 251,
+      "rising": 251,
+      "falling": 0,
+      "sequence_gaps": 0,
+      "same_edge_neighbors": 250,
+      "rising_period_median_ms": 0.009114,
+      "rising_period_min_ms": 0.000833,
+      "rising_period_max_ms": 0.03052,
+      "all_edge_interval_median_ms": 0.009114
+    }
+  ],
+  "requested_pull_none": true,
+  "r3_connection_user_confirmed": true,
+  "gpio_configuration_commands": [
+    {
+      "command": "pinctrl set 17 ip pn",
+      "started": "2026-09-08T18:59:05.519909+09:00",
+      "stdout": "",
+      "completed": "2026-09-08T18:59:05.559131+09:00"
+    }
+  ],
+  "gpio17_before": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "fan_stop_service": "active",
+  "boot_id": "b23a84fa-0a21-41aa-b947-8a12a19431ad",
+  "generator_access_skipped": false,
+  "gpio17_after_pull_command": "17: ip    -- | hi // GPIO17 = input",
+  "scope_min_v": 0.3999999761581421,
+  "scope_max_v": 2.9800000190734863,
+  "error": "RuntimeError('Pi event acquisition aborted')",
+  "final_output1": "0",
+  "final_output2": "0"
+}

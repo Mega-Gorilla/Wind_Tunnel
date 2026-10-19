@@ -1,0 +1,25 @@
+{
+  "reboot_verified": true,
+  "boot_id": "006741d6-4706-46af-a9f0-49b44845a526",
+  "unauthenticated_api": 401,
+  "debug_port_closed": true,
+  "pico": {
+    "status": {
+      "tach_level": 0,
+      "device_id": "e660583883976d2d",
+      "firmware": "0.1.0-commissioning",
+      "fan_enabled": false,
+      "rpm": null,
+      "rpm_valid": false,
+      "mode": "commissioning_locked_stop",
+      "board": "Pico RP2040 / Carrier Rev E",
+      "fan_command_percent": 0,
+      "gp16_level": 0
+    },
+    "pico_ms": 88816,
+    "ok": true,
+    "boot_id": "96ad048cd151dda0",
+    "id": "post-ui-reboot",
+    "seq": 1
+  }
+}

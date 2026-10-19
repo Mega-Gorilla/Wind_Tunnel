@@ -1,0 +1,20 @@
+2026-10-17 JST / Pico monitor 0.2.0 final checks
+
+PC pytest: 66 passed, 5.64 seconds; 1 test-library deprecation warning.
+Pi pytest: 66 passed, 15.48 seconds; 0 failed, 0 skipped.
+Simulation browser regression: 20 checks passed.
+Pi real UI: 6 checks passed after service restart, including 30 live snapshots.
+Sensor snapshots: all valid; no sensor errors; seq updated; GP16 LOW; PWM request/applied 0.
+RPM and airspeed: null (not measured / not calibrated).
+Remote permission: unlimited while ON; final OFF. Safety revocations retained.
+Final normal startup: service active; NRestarts=0; WT_BACKEND=pico-monitor.
+Listener: 127.0.0.1:8765 only; temporary 9222 debug listener closed.
+Unauthenticated status request: HTTP 401.
+USB /dev/ttyACM0 owner: controller PID 3924.
+Deployed source SHA-256: all 31 manifest files matched.
+2026-10-17 19:33:27 JST: normal-screen screenshot after startup, inspected visually.
+Normal screen: real Pico 2 Hz, stopped acquisition, command/applied 0%, sensor values displayed.
+
+No nonzero fan command, physical USB removal, or scope test in this task.
+No OS reboot in this task; firmware soft reboot and service restarts tested.
+Remaining: real Tach, run-capable firmware with independent stop supervision, LAN/TLS, calibration.

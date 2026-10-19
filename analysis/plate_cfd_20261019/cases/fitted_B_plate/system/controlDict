@@ -1,0 +1,41 @@
+FoamFile { version 2.0; format ascii; class dictionary; object controlDict; }
+
+application simpleFoam; startFrom latestTime; startTime 0; stopAt endTime; endTime 80;
+deltaT 1; writeControl timeStep; writeInterval 20; purgeWrite 2;
+writeFormat binary; writePrecision 10; writeCompression off; timeFormat general; timePrecision 8;
+runTimeModifiable true; functions { 
+gridProbes { type probes; libs ("libsampling.dll"); interpolationScheme cellPoint;
+ writeControl timeStep; writeInterval 1; fields (U p k); probeLocations ((-0.032 -.0550529657691 0.032)
+(-0.016 -.0550529657691 0.032)
+(0.0 -.0550529657691 0.032)
+(0.016 -.0550529657691 0.032)
+(0.032 -.0550529657691 0.032)
+(-0.032 -.0550529657691 0.016)
+(-0.016 -.0550529657691 0.016)
+(0.0 -.0550529657691 0.016)
+(0.016 -.0550529657691 0.016)
+(0.032 -.0550529657691 0.016)
+(-0.032 -.0550529657691 0.0)
+(-0.016 -.0550529657691 0.0)
+(0.0 -.0550529657691 0.0)
+(0.016 -.0550529657691 0.0)
+(0.032 -.0550529657691 0.0)
+(-0.032 -.0550529657691 -0.016)
+(-0.016 -.0550529657691 -0.016)
+(0.0 -.0550529657691 -0.016)
+(0.016 -.0550529657691 -0.016)
+(0.032 -.0550529657691 -0.016)
+(-0.032 -.0550529657691 -0.032)
+(-0.016 -.0550529657691 -0.032)
+(0.0 -.0550529657691 -0.032)
+(0.016 -.0550529657691 -0.032)
+(0.032 -.0550529657691 -0.032)); }
+inletFlux { type surfaceFieldValue; libs ("libfieldFunctionObjects.dll"); writeControl timeStep; writeInterval 1;
+ regionType patch; name inlet; operation sum; fields (phi); writeFields false; }
+outletFlux { type surfaceFieldValue; libs ("libfieldFunctionObjects.dll"); writeControl timeStep; writeInterval 1;
+ regionType patch; name outlet; operation sum; fields (phi); writeFields false; }
+inletP { type surfaceFieldValue; libs ("libfieldFunctionObjects.dll"); writeControl timeStep; writeInterval 1;
+ regionType patch; name inlet; operation areaAverage; fields (p); writeFields false; }
+yPlus { type yPlus; libs ("libfieldFunctionObjects.dll"); writeControl writeTime; }
+ }
+

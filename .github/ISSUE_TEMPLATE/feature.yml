@@ -1,0 +1,44 @@
+name: 機能追加と改善
+description: UI、API、測定手順、解析などの変更を計画する
+title: "[Feature] "
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的と現在の問題
+      description: 何を測定・操作できるようにしたいか記載してください。
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 主な対象
+      options:
+        - UIとAPI
+        - Picoファームウェア
+        - 回路とPCB
+        - 機械CAD
+        - 測定と校正
+        - CFDと解析
+        - 文書と開発環境
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 変更範囲と対象外
+      description: 参照する設計版、関連資料、依存Issueも記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 受入条件
+      description: 再現可能な完了条件と検証方法を列挙してください。
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: 実機操作と安全条件
+      description: 実機操作の要否、配線、停止条件、必要な承認を記載。Issue作成だけで運転や書込みを許可しません。

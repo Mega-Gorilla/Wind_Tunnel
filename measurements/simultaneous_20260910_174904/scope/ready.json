@@ -1,0 +1,1 @@
+{"key": "off_baseline", "samples": 5000, "fs": 25000.0, "sample_offset_s": -0.1, "duration_s": 0.2, "min_v": 3.1599998474121094, "max_v": 3.299999952316284, "median_v": 3.240000009536743, "clipped_fraction": 0.0, "fetch_begin_pc_ns": 15319431141200, "fetch_end_pc_ns": 15319669721700}

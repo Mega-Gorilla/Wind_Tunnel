@@ -1,0 +1,518 @@
+{
+  "S1": {
+    "folder": "simultaneous_20260908_210040",
+    "dc_source_setting_v": null,
+    "scope_fs": 100000.0,
+    "scope_duration_s": 2.01228,
+    "scope_steady_window_s": [
+      0.56348,
+      1.43644
+    ],
+    "scope_steady_min_v": 0.4200000762939453,
+    "scope_steady_max_v": 2.9600000381469727,
+    "scope_steady_median_v": 2.5999999046325684,
+    "scope_steady_low_median_v": 0.5800000429153442,
+    "scope_steady_high_median_v": 2.740000009536743,
+    "scope_steady_crossings": 87,
+    "scope_period_ms": [
+      19.989999999999952,
+      20.029999999999994,
+      19.979999999999997,
+      19.979999999999997,
+      19.98000000000011,
+      20.05000000000001,
+      19.95999999999998,
+      20.060000000000077,
+      19.929999999999893,
+      20.029999999999994,
+      20.030000000000104,
+      19.979999999999997,
+      20.019999999999925,
+      20.000000000000128,
+      19.94999999999991,
+      20.040000000000056,
+      19.97000000000004,
+      19.999999999999908,
+      20.000000000000018,
+      20.009999999999973,
+      20.000000000000018,
+      20.000000000000128,
+      20.039999999999836,
+      20.000000000000018,
+      19.950000000000134,
+      19.990000000000173,
+      20.040000000000056,
+      20.019999999999925,
+      19.989999999999952,
+      19.94999999999991,
+      20.009999999999863,
+      20.040000000000056,
+      19.95999999999998,
+      20.019999999999925,
+      20.029999999999994,
+      20.000000000000018,
+      20.000000000000018,
+      19.979999999999887,
+      19.97000000000004,
+      19.999999999999794,
+      20.009999999999863,
+      20.029999999999994
+    ],
+    "pi_saved_events": 251,
+    "pi_status": "aborted",
+    "pi_request_ms": 9.510217,
+    "pi_event_span_ms": 1.812908,
+    "pi_interval_median_us": 6.771,
+    "irq_delta_by_cpu": [
+      628,
+      612,
+      545,
+      643
+    ],
+    "irq_delta_total": 2428,
+    "python_poll": {
+      "source": "Pi read-only GPLEV0 polling",
+      "utc": "2026-09-08T12:00:48.674747+00:00",
+      "requested_duration_s": 0.25,
+      "counts": {
+        "low": 18187,
+        "high": 19581
+      },
+      "detection_before": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "elapsed_s": 0.250004219,
+      "polls": 37768,
+      "transition_count": 405,
+      "transition_cap_reached": false,
+      "detection_after": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+    },
+    "off_before_events": 0,
+    "off_after_events": 0,
+    "final_outputs": [
+      "0",
+      "0"
+    ],
+    "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+    "scope_status": "completed",
+    "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window."
+  },
+  "S2": {
+    "folder": "simultaneous_20260908_210159",
+    "dc_source_setting_v": null,
+    "scope_fs": 100000.0,
+    "scope_duration_s": 2.03716,
+    "scope_steady_window_s": [
+      0.57724,
+      1.44836
+    ],
+    "scope_steady_min_v": 0.3999999761581421,
+    "scope_steady_max_v": 2.9600000381469727,
+    "scope_steady_median_v": 0.7400000095367432,
+    "scope_steady_low_median_v": 0.5800000429153442,
+    "scope_steady_high_median_v": 2.740000009536743,
+    "scope_steady_crossings": 87,
+    "scope_period_ms": [
+      20.050000000000125,
+      19.93999999999996,
+      20.040000000000056,
+      19.979999999999997,
+      19.96999999999993,
+      20.030000000000104,
+      19.97000000000004,
+      20.039999999999836,
+      20.010000000000083,
+      19.990000000000062,
+      19.97000000000004,
+      20.029999999999994,
+      20.000000000000018,
+      19.96999999999993,
+      20.009999999999973,
+      20.029999999999994,
+      19.96999999999993,
+      20.030000000000104,
+      19.95999999999998,
+      20.009999999999863,
+      20.030000000000104,
+      19.97000000000004,
+      20.010000000000083,
+      20.010000000000083,
+      19.97000000000004,
+      20.02999999999977,
+      20.010000000000083,
+      19.95999999999998,
+      20.019999999999705,
+      19.979999999999887,
+      19.999999999999794,
+      19.990000000000173,
+      20.009999999999863,
+      20.040000000000056,
+      20.00999999999964,
+      19.95999999999998,
+      20.029999999999994,
+      20.009999999999863,
+      19.96999999999982,
+      20.030000000000214,
+      20.000000000000018,
+      20.019999999999925
+    ],
+    "pi_saved_events": 251,
+    "pi_status": "aborted",
+    "pi_request_ms": 9.676777,
+    "pi_event_span_ms": 1.704836,
+    "pi_interval_median_us": 6.718,
+    "irq_delta_by_cpu": [
+      644,
+      617,
+      568,
+      650
+    ],
+    "irq_delta_total": 2479,
+    "python_poll": {
+      "source": "Pi read-only GPLEV0 polling",
+      "utc": "2026-09-08T12:02:07.314082+00:00",
+      "requested_duration_s": 0.25,
+      "counts": {
+        "low": 17509,
+        "high": 18505
+      },
+      "detection_before": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "elapsed_s": 0.250009116,
+      "polls": 36014,
+      "transition_count": 351,
+      "transition_cap_reached": false,
+      "detection_after": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+    },
+    "off_before_events": 0,
+    "off_after_events": 0,
+    "final_outputs": [
+      "0",
+      "0"
+    ],
+    "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+    "scope_status": "completed",
+    "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window."
+  },
+  "L1": {
+    "folder": "simultaneous_20260908_210725",
+    "dc_source_setting_v": 0.3,
+    "scope_fs": 100000.0,
+    "scope_duration_s": 2.08108,
+    "scope_steady_window_s": [
+      0.58636,
+      1.4892400000000001
+    ],
+    "scope_steady_min_v": 0.4200000762939453,
+    "scope_steady_max_v": 0.8799999952316284,
+    "scope_steady_median_v": 0.5800000429153442,
+    "scope_steady_low_median_v": 0.5800000429153442,
+    "scope_steady_high_median_v": null,
+    "scope_steady_crossings": 0,
+    "scope_period_ms": [],
+    "pi_saved_events": 251,
+    "pi_status": "aborted",
+    "pi_request_ms": 10.468173,
+    "pi_event_span_ms": 2.046344,
+    "pi_interval_median_us": 7.5785,
+    "irq_delta_by_cpu": [
+      914,
+      828,
+      792,
+      774
+    ],
+    "irq_delta_total": 3308,
+    "python_poll": {
+      "source": "Pi read-only GPLEV0 polling",
+      "utc": "2026-09-08T12:07:32.802284+00:00",
+      "requested_duration_s": 0.25,
+      "counts": {
+        "low": 38148,
+        "high": 400
+      },
+      "detection_before": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "elapsed_s": 0.250006161,
+      "polls": 38548,
+      "transition_count": 800,
+      "transition_cap_reached": false,
+      "detection_after": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+    },
+    "off_before_events": 0,
+    "off_after_events": 0,
+    "final_outputs": [
+      "0",
+      "0"
+    ],
+    "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+    "scope_status": "completed",
+    "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window."
+  },
+  "H1": {
+    "folder": "simultaneous_20260908_210809",
+    "dc_source_setting_v": 2.7,
+    "scope_fs": 100000.0,
+    "scope_duration_s": 2.52572,
+    "scope_steady_window_s": [
+      0.539,
+      1.92356
+    ],
+    "scope_steady_min_v": 2.5,
+    "scope_steady_max_v": 2.9600000381469727,
+    "scope_steady_median_v": 2.740000009536743,
+    "scope_steady_low_median_v": null,
+    "scope_steady_high_median_v": 2.740000009536743,
+    "scope_steady_crossings": 0,
+    "scope_period_ms": [],
+    "pi_saved_events": 0,
+    "pi_status": "completed",
+    "pi_request_ms": 504.672895,
+    "pi_event_span_ms": null,
+    "pi_interval_median_us": null,
+    "irq_delta_by_cpu": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "irq_delta_total": 0,
+    "python_poll": {
+      "source": "Pi read-only GPLEV0 polling",
+      "utc": "2026-09-08T12:08:16.823959+00:00",
+      "requested_duration_s": 0.25,
+      "counts": {
+        "low": 0,
+        "high": 37376
+      },
+      "detection_before": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "elapsed_s": 0.250006616,
+      "polls": 37376,
+      "transition_count": 0,
+      "transition_cap_reached": false,
+      "detection_after": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+    },
+    "off_before_events": 0,
+    "off_after_events": 0,
+    "final_outputs": [
+      "0",
+      "0"
+    ],
+    "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+    "scope_status": "completed",
+    "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window."
+  },
+  "L2": {
+    "folder": "simultaneous_20260908_210955",
+    "dc_source_setting_v": 0.3,
+    "scope_fs": 100000.0,
+    "scope_duration_s": 2.24388,
+    "scope_steady_window_s": [
+      0.5366,
+      1.64508
+    ],
+    "scope_steady_min_v": 0.4200000762939453,
+    "scope_steady_max_v": 0.8799999952316284,
+    "scope_steady_median_v": 0.5800000429153442,
+    "scope_steady_low_median_v": 0.5800000429153442,
+    "scope_steady_high_median_v": null,
+    "scope_steady_crossings": 0,
+    "scope_period_ms": [],
+    "pi_saved_events": 251,
+    "pi_status": "aborted",
+    "pi_request_ms": 10.396245,
+    "pi_event_span_ms": 1.873948,
+    "pi_interval_median_us": 6.771,
+    "irq_delta_by_cpu": [
+      833,
+      770,
+      873,
+      885
+    ],
+    "irq_delta_total": 3361,
+    "python_poll": {
+      "source": "Pi read-only GPLEV0 polling",
+      "utc": "2026-09-08T12:10:05.417274+00:00",
+      "requested_duration_s": 0.25,
+      "counts": {
+        "low": 37699,
+        "high": 414
+      },
+      "detection_before": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "elapsed_s": 0.250007369,
+      "polls": 38113,
+      "transition_count": 826,
+      "transition_cap_reached": false,
+      "detection_after": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+    },
+    "off_before_events": 0,
+    "off_after_events": 0,
+    "final_outputs": [
+      "0",
+      "0"
+    ],
+    "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+    "scope_status": "completed",
+    "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window.",
+    "native_poll": {
+      "source": "C volatile uint32_t GPLEV0 read, dmb sy",
+      "elapsed_ns": 52393721,
+      "polls": 404605,
+      "low": 400509,
+      "high": 4096,
+      "transition_count": 8192,
+      "detection_before_mask": 0,
+      "detection_after_mask": 0,
+      "cap_reached": true
+    }
+  },
+  "H2": {
+    "folder": "simultaneous_20260908_211202",
+    "dc_source_setting_v": 2.7,
+    "scope_fs": 100000.0,
+    "scope_duration_s": 2.86868,
+    "scope_steady_window_s": [
+      0.5374,
+      2.2720399999999996
+    ],
+    "scope_steady_min_v": 2.5,
+    "scope_steady_max_v": 2.9600000381469727,
+    "scope_steady_median_v": 2.740000009536743,
+    "scope_steady_low_median_v": null,
+    "scope_steady_high_median_v": 2.740000009536743,
+    "scope_steady_crossings": 0,
+    "scope_period_ms": [],
+    "pi_saved_events": 0,
+    "pi_status": "completed",
+    "pi_request_ms": 504.422266,
+    "pi_event_span_ms": null,
+    "pi_interval_median_us": null,
+    "irq_delta_by_cpu": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "irq_delta_total": 0,
+    "python_poll": {
+      "source": "Pi read-only GPLEV0 polling",
+      "utc": "2026-09-08T12:12:10.761400+00:00",
+      "requested_duration_s": 0.25,
+      "counts": {
+        "low": 0,
+        "high": 38485
+      },
+      "detection_before": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "elapsed_s": 0.250007708,
+      "polls": 38485,
+      "transition_count": 0,
+      "transition_cap_reached": false,
+      "detection_after": {
+        "REN": false,
+        "FEN": false,
+        "HEN": false,
+        "LEN": false,
+        "AREN": false,
+        "AFEN": false
+      },
+      "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+    },
+    "off_before_events": 0,
+    "off_after_events": 0,
+    "final_outputs": [
+      "0",
+      "0"
+    ],
+    "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+    "scope_status": "completed",
+    "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window.",
+    "native_poll": {
+      "source": "C volatile uint32_t GPLEV0 read, dmb sy",
+      "elapsed_ns": 250000208,
+      "polls": 1982973,
+      "low": 0,
+      "high": 1982973,
+      "transition_count": 0,
+      "detection_before_mask": 0,
+      "detection_after_mask": 0,
+      "cap_reached": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pages": 5,
+  "pdf_sha256": "cdb67503ab2cebd574d90c25f397dcebc1514c3e4bf6b5463a0d06fbcab2d282",
+  "pdf_bytes": 1631869,
+  "fonts": {
+    "/Helvetica": false,
+    "/AAAAAA+Meiryo-0": true,
+    "/AAAAAB+Meiryo-0": true,
+    "/AAAAAA+MS-Mincho-0": true,
+    "/AAAAAB+MS-Mincho-0": true,
+    "/AAAAAC+MS-Mincho-0": true
+  },
+  "cleanup_manifest_checked": true,
+  "text_structure_and_data_checks_passed": true,
+  "failures": [],
+  "visual_review": "All five final pages rendered with Poppler and inspected at 130 dpi; formula glyph and grid-label fixes verified.",
+  "scientific_calibration_eligible": false
+}

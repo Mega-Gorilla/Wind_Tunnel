@@ -1,0 +1,114 @@
+{
+  "source_scope": "OWON CH1 single shot",
+  "sample_rate_hz": 500000.0,
+  "window_us": [
+    -1000.0,
+    9000.0
+  ],
+  "min_max_v": [
+    0.25999999046325684,
+    3.4200000762939453
+  ],
+  "edges_us_relative_scope_trigger": [
+    [
+      10.000000000000027,
+      "fall"
+    ],
+    [
+      15.999999999999956,
+      "rise"
+    ],
+    [
+      41.999999999999936,
+      "fall"
+    ],
+    [
+      48.000000000000085,
+      "rise"
+    ],
+    [
+      74.00000000000007,
+      "fall"
+    ],
+    [
+      80.0,
+      "rise"
+    ],
+    [
+      105.99999999999997,
+      "fall"
+    ],
+    [
+      113.99999999999996,
+      "rise"
+    ],
+    [
+      123.99999999999997,
+      "fall"
+    ],
+    [
+      129.99999999999991,
+      "rise"
+    ],
+    [
+      147.99999999999991,
+      "fall"
+    ],
+    [
+      162.00000000000003,
+      "rise"
+    ],
+    [
+      164.00000000000009,
+      "fall"
+    ],
+    [
+      172.00000000000006,
+      "rise"
+    ],
+    [
+      175.99999999999994,
+      "fall"
+    ],
+    [
+      182.00000000000009,
+      "rise"
+    ],
+    [
+      190.00000000000006,
+      "fall"
+    ],
+    [
+      219.99999999999991,
+      "rise"
+    ],
+    [
+      221.99999999999997,
+      "fall"
+    ],
+    [
+      7252.000000000001,
+      "rise"
+    ]
+  ],
+  "scope_below_1v_median": 0.5800000429153442,
+  "scope_above_2v_median": 2.759999990463257,
+  "pi_events": 251,
+  "pi_event_span_ms": 1.666812,
+  "pi_first_event_after_request_ms": 335.122653,
+  "pi_interval_us": {
+    "min": 0.937,
+    "median": 6.614,
+    "max": 34.999
+  },
+  "gpio17_irq_delta_cpu": [
+    537,
+    512,
+    522,
+    552
+  ],
+  "gpio17_irq_delta_total": 2123,
+  "output_on_to_off_command_ms": 43.6792,
+  "pi_acquiring_received_to_on_ms": 316.3399,
+  "timing_limit": "Single shot captures one edge after prearming; does not cover entire Pi event window. No precise scope/Pi phase synchronization."
+}

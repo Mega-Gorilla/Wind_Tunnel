@@ -1,0 +1,86 @@
+{
+  "folder": "simultaneous_20260910_165409",
+  "dc_source_setting_v": 2.7,
+  "gpio": 17,
+  "input_capacitance_nf_user_report": 10.0,
+  "boot_id": "2190fa2b-f92e-4c31-99ae-cfe500ad6664",
+  "scope_fs": 25000.0,
+  "scope_duration_s": 3.08208,
+  "scope_steady_window_s": [
+    0.66768,
+    2.45584
+  ],
+  "scope_steady_min_v": 2.679999828338623,
+  "scope_steady_max_v": 2.799999952316284,
+  "scope_steady_median_v": 2.740000009536743,
+  "scope_steady_low_median_v": null,
+  "scope_steady_high_median_v": 2.740000009536743,
+  "scope_steady_crossings": 0,
+  "scope_period_ms": [],
+  "pi_saved_events": 0,
+  "pi_status": "completed",
+  "pi_request_ms": 504.157709,
+  "pi_event_span_ms": null,
+  "pi_interval_median_us": null,
+  "irq_delta_by_cpu": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "irq_delta_total": 0,
+  "python_poll": {
+    "source": "Pi read-only GPLEV0 polling",
+    "utc": "2026-09-10T07:54:16.482151+00:00",
+    "gpio": 17,
+    "requested_duration_s": 0.25,
+    "counts": {
+      "low": 0,
+      "high": 34709
+    },
+    "detection_before": {
+      "REN": false,
+      "FEN": false,
+      "HEN": false,
+      "LEN": false,
+      "AREN": false,
+      "AFEN": false
+    },
+    "elapsed_s": 0.250018928,
+    "polls": 34709,
+    "transition_count": 0,
+    "transition_cap_reached": false,
+    "detection_after": {
+      "REN": false,
+      "FEN": false,
+      "HEN": false,
+      "LEN": false,
+      "AREN": false,
+      "AFEN": false
+    },
+    "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+  },
+  "off_before_events": 0,
+  "off_after_events": 0,
+  "final_outputs": [
+    "0",
+    "0"
+  ],
+  "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+  "scope_status": "completed",
+  "note": "Steady window selected from OSC active blocks with 0.2 s trimmed at both ends, not exact Pi window.",
+  "native_poll": {
+    "gpio": 17,
+    "source": "C volatile uint32_t GPLEV0 read, dmb sy",
+    "elapsed_ns": 250000386,
+    "polls": 1972820,
+    "low": 0,
+    "high": 1972820,
+    "transition_count": 0,
+    "detection_before_mask": 0,
+    "detection_after_mask": 0,
+    "cap_reached": false
+  },
+  "input_capacitance_nominal_nf": 10.0,
+  "capacitor_marking_user_report": "103"
+}

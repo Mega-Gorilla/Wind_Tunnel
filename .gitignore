@@ -1,0 +1,130 @@
+# Credentials, host-specific access, runtime state (keep these locally).
+.local/
+.env
+.env.*
+!.env.example
+**/.runtime/
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*known_hosts*
+/Docs/operations/SSH_CONNECTION.md
+/measurements/network_*/
+/measurements/pi32_admin_*.json
+/measurements/pi32_preflight_*.json
+
+# Installed applications, vendor checkouts, interpreters and caches.
+/external/
+/Raspberry Pi Imager/
+/tools/imaging/
+/Archive/
+/tmp/
+**/.venv/
+**/venv/
+**/node_modules/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+**/test-results/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# KiCad editable sources/libraries/manufacturing outputs ARE tracked.
+*.kicad_prl
+fp-info-cache
+*.lck
+~*.lck
+*-backups/
+*.bak
+*.tmp
+
+# CFD software, generated meshes and volume fields remain on this PC.
+# Preserve case settings, compact provenance and final reports in Git.
+/analysis/*/tools/
+/analysis/*/downloads/
+/analysis/*/meshes/
+/analysis/*/cases/*/*
+!/analysis/*/cases/*/system/
+!/analysis/*/cases/*/system/**
+!/analysis/*/cases/*/constant/
+/analysis/*/cases/*/constant/*
+!/analysis/*/cases/*/constant/transportProperties
+!/analysis/*/cases/*/constant/turbulenceProperties
+!/analysis/*/cases/*/case_metadata.json
+!/analysis/*/cases/*/mesh_diagnostic_acceptance.json
+
+# Machine-specific dependency inspection / transient renders.
+*.inspect.ndjson
+
+# Public edition: local instructions, migration logs and vendor references.
+/AGENTS.md
+/tools/maintenance/
+/Docs/maintenance/*
+!/Docs/maintenance/publication-review/
+/Docs/archive/
+/Docs/references/
+/Docs/research/wind-tunnel-20261018/ui-references/
+/Docs/procurement/misumi-psu-v49/build_parts_list.mjs
+
+# Publish the current independent electronics, not legacy diagnostic bundles.
+/Electronics/*
+!/Electronics/README.md
+!/Electronics/pico/
+!/Electronics/manufacturing/
+!/Electronics/library-licenses/
+/Electronics/pico/*
+!/Electronics/pico/README.md
+!/Electronics/pico/pcb_rev_e/
+!/Electronics/pico/firmware/
+!/Electronics/pico/diagnostics/
+
+# Do not redistribute the official wind-tunnel CAD, including converted geometry.
+# Our analysis code, settings, figures and numerical results remain publishable.
+/analysis/*/geometry/*.stl
+/analysis/*/geometry/fusion_geometry.json
+/Docs/research/wind-tunnel-20261018/fusion-pitot-evidence.json
+/Mechanical/*
+!/Mechanical/README.md
+!/Mechanical/cad/
+/Mechanical/cad/*
+!/Mechanical/cad/item_holder_contact_20261016/
+!/Mechanical/cad/power_supply_printed_20261016/
+/Mechanical/cad/item_holder_contact_20261016/*
+!/Mechanical/cad/item_holder_contact_20261016/Item_Holder_FrameContact.step
+!/Mechanical/cad/item_holder_contact_20261016/Item_Holder_FrameContact_PRINT.stl
+!/Mechanical/cad/item_holder_contact_20261016/Insert_Coupon_M2_2p8_2p9_3p0.stl
+!/Mechanical/cad/item_holder_contact_20261016/Insert_Coupon_M3_4p5_4p6_4p7.stl
+!/Mechanical/cad/item_holder_contact_20261016/ASSEMBLY_AND_PARTS.txt
+/Mechanical/cad/power_supply_printed_20261016/*
+!/Mechanical/cad/power_supply_printed_20261016/PowerSupply_Plate.step
+!/Mechanical/cad/power_supply_printed_20261016/PowerSupply_Plate_PLA_FITCHECK.stl
+!/Mechanical/cad/power_supply_printed_20261016/Printed_Supports_Pair.step
+!/Mechanical/cad/power_supply_printed_20261016/PSU_Support_PLA_FITCHECK_PRINT_2.stl
+!/Mechanical/cad/power_supply_printed_20261016/ASSEMBLY_AND_LIMITATIONS.txt
+
+# Private path / host details in original evidence are preserved locally.
+/Docs/tests/gpio-legacy/figures/103_corrected/comparison_summary.json
+/Docs/tests/gpio-legacy/figures/gpio27_comparison/comparison_summary.json
+/Docs/tests/gpio-legacy/figures/gpio_consolidated/summary.json
+/Docs/tests/gpio-legacy/figures/rc10nf_retest/comparison_summary.json
+/Docs/tests/software/pico-control/final-verification.json
+/measurements/known_input_20260908_184724/scope_off_rising_stdout.txt
+/measurements/simultaneous_20260910_134403/settled_analysis.json
+/measurements/simultaneous_20260910_134459/settled_analysis.json
+/measurements/simultaneous_20260910_134729/settled_analysis.json
+/measurements/simultaneous_20260910_162859/settled_analysis.json
+/measurements/simultaneous_20260910_162945/settled_analysis.json
+/measurements/simultaneous_20260910_163056/settled_analysis.json
+/measurements/sensor_fan_20261017/fullrange_code/run_fullrange_ssh.py
+/measurements/sensor_fan_20261017/fullrange_code/run_stdout.txt
+/measurements/simultaneous_20260911_174015/run_log.json
+/measurements/simultaneous_20260911_174103/run_log.json
+/measurements/simultaneous_20260911_174151/run_log.json
+/measurements/simultaneous_20260911_174244/run_log.json

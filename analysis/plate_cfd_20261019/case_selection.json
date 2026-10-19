@@ -1,0 +1,17 @@
+{
+  "purpose": "2026-10-19 fixed-plate mesh and transient diagnostic re-evaluation",
+  "quantitatively_validated_case": null,
+  "cases": {
+    "fitted_A": {"status": "rejected", "reason": "Near-coincident CAD-section edges produced tiny cells; 6 extended mesh checks failed. Never solved."},
+    "fitted_B": {"status": "diagnostic_only", "reason": "CAD area agreement and convex geometry improved. One extended determinant check still flags slender cells. Gap audit: 2 cells across the sampled 0.2 mm lateral gaps."},
+    "fitted_C": {"status": "rejected", "reason": "Anisotropic BAMG reduced cell count but increased maximum non-orthogonality to 85.22 degrees and aspect ratio to 1608.56. Never solved."},
+    "fitted_D": {"status": "rejected", "reason": "Experimental transfinite strips produced a mesh-area mismatch (8441.77 versus 6271.17 mm2). No 3D CFD case was built."},
+    "fitted_E": {"status": "rejected", "reason": "The same area mismatch was caught by an added mesh-area assertion. No CFD case was built."},
+    "fitted_B_urans": {"status": "aborted_numerical_pilot", "reason": "Strict final pressure solve hit the 1000-iteration cap on the first step. Original log and initial state retained."},
+    "fitted_B_urans_renumbered": {"status": "short_startup_diagnostic", "reason": "Same mesh, CuthillMcKee reordering and revised pressure linear solve. 0.002 s is insufficient for a statistically stationary mean."},
+    "fitted_F": {"status": "axial_spacing_and_startup_diagnostic", "reason": "Same section and connectivity; first axial spacing changed from 0.1 to 0.5 mm, maximum from 16 to 12 mm. Initial fields were stretched with cell numbering and phi recomputed. Differences are not a pure grid-convergence estimate."},
+    "linux_B_urans": {"status": "runtime_and_compatibility_pilot", "reason": "Same B initial checkpoint, official Linux build. Stopped after six steps; not a stationary physical result or an OS-only benchmark."},
+    "linux_F_urans": {"status": "short_transient_continuation", "reason": "Continues Windows F checkpoint at 0.01126998051 s. Pilot end set to 0.015 s, not the initially planned 0.3 s. Statistics timeStart 0.15 s is not reached; no mean result is adopted."},
+    "linux_F_empty_urans": {"status": "short_transient_baseline_pilot", "reason": "F empty steady iteration 150 relabelled as t=0, pilot to 0.002 s. Different initialization history, not a matched stationary mean."}
+  }
+}

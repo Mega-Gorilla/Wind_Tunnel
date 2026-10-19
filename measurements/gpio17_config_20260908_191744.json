@@ -1,0 +1,78 @@
+{
+  "created": "2026-09-08T19:17:41.841520+09:00",
+  "read_only": true,
+  "commands": {
+    "model": {
+      "command": "cat /proc/device-tree/model",
+      "stdout": "Raspberry Pi 3 Model B Plus Rev 1.3",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "kernel": {
+      "command": "uname -r",
+      "stdout": "6.18.34+rpt-rpi-v8\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "uptime": {
+      "command": "uptime",
+      "stdout": " 19:17:43 up  1:43,  3 users,  load average: 0.15, 0.03, 0.01\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "controllers": {
+      "command": "pinctrl -l",
+      "stdout": "GPIO chips:\n  3f200000: bcm2835 (54 gpios)\n  0: firmware (8 gpios)\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "gpio17": {
+      "command": "pinctrl get 17",
+      "stdout": "17: ip    -- | hi // GPIO17 = input\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "gpio18": {
+      "command": "pinctrl get 18",
+      "stdout": "18: op -- -- | hi // GPIO18 = output\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "kernel_line_info": {
+      "command": "gpioinfo -c gpiochip0 17",
+      "stdout": "gpiochip0 17\t\"GPIO17\"        \tinput\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "boot_config": {
+      "command": "cat /boot/firmware/config.txt",
+      "stdout": "# For more options and information see\n# http://rptl.io/configtxt\n# Some settings may impact device functionality. See link above for details\n\n# Uncomment some or all of these to enable the optional hardware interfaces\n#dtparam=i2c_arm=on\n#dtparam=i2s=on\n#dtparam=spi=on\n\n# Enable audio (loads snd_bcm2835)\ndtparam=audio=on\n\n# Additional overlays and parameters are documented\n# /boot/firmware/overlays/README\n\n# Automatically load overlays for detected cameras\ncamera_auto_detect=1\n\n# Automatically load overlays for detected DSI displays\ndisplay_auto_detect=1\n\n# Automatically load initramfs files, if found\nauto_initramfs=1\n\n# Enable DRM VC4 V3D driver\ndtoverlay=vc4-kms-v3d\nmax_framebuffers=2\n\n# Don't have the firmware create an initial video= setting in cmdline.txt.\n# Use the kernel's default instead.\ndisable_fw_kms_setup=1\n\n# Run in 64-bit mode\narm_64bit=1\n\n# Disable compensation for displays with overscan\ndisable_overscan=1\n\n# Run as fast as firmware / board allows\narm_boost=1\n\n[cm4]\n# Enable host mode on the 2711 built-in XHCI USB controller.\n# This line should be removed if the legacy DWC2 controller is required\n# (e.g. for USB device mode) or if USB support is not required.\notg_mode=1\n\n[cm5]\ndtoverlay=dwc2,dr_mode=host\n\n[pi5]\ndtoverlay=nospi10\n\n[all]\n\n# WindTunnel: C1815 inverts fan PWM; GPIO18 HIGH requests fan STOP.\n# Applied by firmware, not a guarantee during power-on/reset before firmware.\ngpio=18=op,dh\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "fan_stop_unit": {
+      "command": "systemctl cat windtunnel-fan-stop.service",
+      "stdout": "# /etc/systemd/system/windtunnel-fan-stop.service\n[Unit]\nDescription=Keep WindTunnel inverted fan control at STOP on boot and shutdown\nDocumentation=https://www.raspberrypi.com/documentation/computers/config_txt.html\nDefaultDependencies=no\nAfter=local-fs.target\nBefore=sysinit.target shutdown.target\nConflicts=shutdown.target\nConditionPathExists=/usr/bin/pinctrl\n\n[Service]\nType=oneshot\nExecStart=/usr/bin/pinctrl set 18 op dh\nExecStop=/usr/bin/pinctrl set 18 op dh\nRemainAfterExit=yes\nTimeoutStartSec=5\nTimeoutStopSec=5\n\n[Install]\nWantedBy=sysinit.target\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "fan_stop_status": {
+      "command": "systemctl is-active windtunnel-fan-stop.service",
+      "stdout": "active\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "kernel_package": {
+      "command": "dpkg-query -W linux-image-6.18.34+rpt-rpi-v8",
+      "stdout": "linux-image-6.18.34+rpt-rpi-v8\t1:6.18.34-1+rpt1\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "interrupts": {
+      "command": "cat /proc/interrupts",
+      "stdout": "           CPU0       CPU1       CPU2       CPU3       \n  2:       2930       3016       2981       2982 ARMCTRL-level   1 Edge      3f00b880.mailbox\n  3:         26         20         23         22 ARMCTRL-level   2 Edge      VCHIQ doorbell\n 51:   14003090   14035615   14003091   14037486 ARMCTRL-level  41 Edge      dwc_otg_sim-fiq\n 52:          0          0          0          0 ARMCTRL-level  42 Edge      vc4\n 53:          0          0          0          0 ARMCTRL-level  43 Edge      3f004000.txp\n 60:        858        825        779        751 ARMCTRL-level  50 Edge      DMA IRQ\n 62:       2852       2896       2861       2861 ARMCTRL-level  52 Edge      DMA IRQ\n 63:          0          0          0          0 ARMCTRL-level  53 Edge      DMA IRQ\n 66:         51         53         52         49 ARMCTRL-level  56 Edge      DMA IRQ\n 74:    1668790    1633375    1667697    1633387 ARMCTRL-level  64 Edge      dwc_otg, dwc_otg_pcd, dwc_otg_hcd:usb1\n 75:       4639       4584       4690       4630 ARMCTRL-level  65 Edge      vc4 hvs\n 82:          0          0          0          0 ARMCTRL-level  72 Edge      vc4 hdmi cec\n 84:          0          0          0          0 ARMCTRL-level  74 Edge      vc4 crtc\n 86:          4          4          4          3 ARMCTRL-level  76 Edge      vc4 dsi\n 87:          0          0          0          0 ARMCTRL-level  77 Edge      vc4 crtc\n 88:       3115       3088       3118       3052 ARMCTRL-level  78 Edge      vc4 crtc\n 95:     127732     130397     128432     128438 ARMCTRL-level  85 Edge      3f205000.i2c, 3f805000.i2c\n 98:        211        205        195        244 ARMCTRL-level  88 Edge      mmc0\n 99:       2115       2087       2132       2085 ARMCTRL-level  89 Edge      uart-pl011\n104:      39309      39560      39669      39721 ARMCTRL-level  94 Edge      mmc1\n180:     163042     630873     173609     177244 bcm2836-timer   1 Edge      arch_timer\n181:          0          0          0          0 bcm2836-timer   3 Edge      kvm guest vtimer\n183:          0          0          0          0 bcm2836-pmu   9 Edge      arm-pmu\nIPI0:      2980       6193       2557       3659       Rescheduling interrupts\nIPI1:     78211     301605      77986      81342       Function call interrupts\nIPI2:         0          0          0          0       CPU stop interrupts\nIPI3:         0          0          0          0       CPU stop NMIs\nIPI4:         0          0          0          0       Timer broadcast interrupts\nIPI5:      4516      39261       5152       5356       IRQ work interrupts\nIPI6:         0          0          0          0       CPU backtrace interrupts\nIPI7:         0          0          0          0       KGDB roundup interrupts\nErr:          0\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "created": "2026-09-08T18:46:05.897613+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND"
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF"
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SIN"
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0"
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0"
+    }
+  ],
+  "gpio_connected_confirmed": true,
+  "physical_condition_user_report": "generator_connected",
+  "trials": [],
+  "requested_pull_none": false,
+  "gpio_configuration_commands": [],
+  "gpio17_before": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "fan_stop_service": "active",
+  "boot_id": "b23a84fa-0a21-41aa-b947-8a12a19431ad",
+  "generator_access_skipped": false,
+  "error": "RuntimeError('Unsafe setting: :SOUR1:FUNC?')",
+  "final_output1": "0",
+  "final_output2": "0"
+}

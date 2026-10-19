@@ -1,0 +1,11 @@
+{
+  "case": "fitted_F_urans",
+  "time_s": 0.01126998051,
+  "source": "cases\\fitted_F_urans\\postProcessing\\sample\\0.01126998051\\longitudinal_k_p_U.xy",
+  "finite_sample_count": 10753,
+  "sample_Uy_range_ms": [
+    -1.60427091,
+    6.092645481
+  ],
+  "note": "Finite spatial samples, not full-field extrema. Missing samples remain masked; solids shown in grey."
+}

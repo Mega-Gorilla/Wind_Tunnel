@@ -1,0 +1,31 @@
+{
+  "source": "Pi read-only GPLEV0 polling",
+  "utc": "2026-09-08T09:13:01.064887+00:00",
+  "requested_duration_s": 0.25,
+  "transitions": [],
+  "counts": {
+    "low": 0,
+    "high": 39208
+  },
+  "detection_before": {
+    "REN": false,
+    "FEN": false,
+    "HEN": false,
+    "LEN": false,
+    "AREN": false,
+    "AFEN": false
+  },
+  "elapsed_s": 0.250008676,
+  "polls": 39208,
+  "transition_count": 0,
+  "transition_cap_reached": false,
+  "detection_after": {
+    "REN": false,
+    "FEN": false,
+    "HEN": false,
+    "LEN": false,
+    "AREN": false,
+    "AFEN": false
+  },
+  "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+}

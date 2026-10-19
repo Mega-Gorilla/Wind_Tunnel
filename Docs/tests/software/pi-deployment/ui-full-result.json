@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "browser": "151.0.3",
+  "display": {
+    "visibility": "visible",
+    "width": 800,
+    "height": 480,
+    "loginHidden": true,
+    "state": "停止待機"
+  },
+  "checks": [
+    "authenticated local display visible at 800x480",
+    "no horizontal overflow; monitor fits; stop >=48px; SVG icons render",
+    "screen pointer actions start finite simulation; automatic completion",
+    "completed simulation recorded in visible history",
+    "screen stop cancels simulation",
+    "screen remote mode ON/OFF; final OFF",
+    "reload retains authenticated local session",
+    "simulation true; idle; remote OFF; requested PWM 0; telemetry fresh"
+  ],
+  "status": {
+    "simulation": true,
+    "device": "simulated_pico",
+    "state": "IDLE",
+    "fault": null,
+    "control_epoch": 3,
+    "pwm_requested_percent": 0,
+    "active_run": null,
+    "remote": {
+      "enabled": false,
+      "permit": null
+    },
+    "ui_alive": true,
+    "telemetry": {
+      "simulation": true,
+      "source": "simulated_pico",
+      "seq": 548,
+      "monotonic_s": 8741.957438466,
+      "connected": true,
+      "valid": true,
+      "reason": null,
+      "pwm_applied_percent": 0,
+      "rpm_estimated": 96.9,
+      "pulses_per_revolution_assumed": 2,
+      "differential_pressure_pa": -0.033,
+      "temperature_c": 26.959544418285493,
+      "relative_humidity_percent": 36,
+      "ambient_pressure_pa": 102350,
+      "bus_voltage_v": 12,
+      "current_a": 0.004,
+      "power_w": 0.048,
+      "airspeed_m_s": null,
+      "airspeed_reason": "pressure_mapping_and_calibration_pending",
+      "sw1_position": "unknown",
+      "settled": null,
+      "received_at": "2026-10-17T09:18:09.128618+00:00",
+      "age_ms": 117.82737499925133
+    },
+    "stop_note": "設定値0と羽根の物理停止は別。表示はすべて模擬値です。"
+  }
+}

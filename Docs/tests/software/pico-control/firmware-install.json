@@ -1,0 +1,60 @@
+{
+  "installed_sha256": "9df916c83c7e7dadde5eaa7d29741f8ceabb86417f8d32fe65fdae10499b431f",
+  "sensors_sha256": "9e4d3c5dbec99f0781817427882e324eae3f2611cdc5160899e4762aa19cb791",
+  "previous_sha256": "78adee026ddf0c5db97f56cad0e7a884df33ac33251f310e745c262dfbf715c0",
+  "pico_backup": "main.backup-78adee026ddf.py",
+  "status": {
+    "pico_ms": 7280950,
+    "fan_locked_stop": false,
+    "gp16_level": 0,
+    "lease_ms": 2000,
+    "fault": null,
+    "seq": 1,
+    "safety_epoch": 0,
+    "sample_seq": 1,
+    "pwm_hz": 25000,
+    "watchdog_ms": 3000,
+    "ok": true,
+    "id": "installed-control",
+    "watchdog_enabled": false,
+    "error": null,
+    "sample_age_ms": 33,
+    "fan_command_percent": 0,
+    "run_id": null,
+    "arm_id": null,
+    "fan_enabled": false,
+    "protocol": 2,
+    "firmware": "0.3.0-control",
+    "boot_id": "f21c9b8a69352fa0",
+    "device_id": "e660583883976d2d",
+    "raw": {
+      "pwm_window_start_percent": 0,
+      "ina_flags": 8,
+      "tach_counter": 0,
+      "bme_read_ms": 7280874,
+      "ina_frame_hex": "000325a10005",
+      "tach_edges": 0,
+      "tach_ppr": 2,
+      "tach_window_mixed_pwm": false,
+      "pwm_window_end_percent": 0,
+      "tach_total_edges": 0,
+      "bme_frame_hex": "4af700835e005114",
+      "identity": {
+        "bme_cal_88_hex": "a36e8b673200fd8ef7d5d00b9e22dafff9ffac260ad8bd10004b",
+        "bme_cal_e1_hex": "9e01000d22031e",
+        "ina_die_id": 8816,
+        "sdp_identity_frame_hex": "0302ce0b01aa0000810000819c4227145341",
+        "bme_chip_id": 96,
+        "ina_manufacturer_id": 21577
+      },
+      "errors": {
+        "sdp": "WARMING_UP"
+      },
+      "ina_read_ms": 7280917,
+      "tach_hz": 0.0,
+      "tach_window_us": 591127,
+      "tach_method": "PWM7_B_falling_input_only"
+    },
+    "kind": "telemetry"
+  }
+}

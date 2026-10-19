@@ -1,0 +1,3 @@
+# Optional real USB adapter. On deployed Pi use OS python3-serial instead.
+-r requirements.txt
+pyserial==3.5

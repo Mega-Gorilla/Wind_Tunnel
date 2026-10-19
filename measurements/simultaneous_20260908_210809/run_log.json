@@ -1,0 +1,325 @@
+{
+  "created": "2026-09-08T21:08:09.417753+09:00",
+  "transactions": [
+    {
+      "query": "*IDN?",
+      "response": "NF Corporation,WF1974,9184397,Ver2.30",
+      "pc_ns": 18143760789400
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18143766001700
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0",
+      "pc_ns": 18143770886100
+    },
+    {
+      "query": ":CHAN:MODE?",
+      "response": "IND",
+      "pc_ns": 18143775435800
+    },
+    {
+      "query": ":OUTP1:LOAD?",
+      "response": "INF",
+      "pc_ns": 18143780903600
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU",
+      "pc_ns": 18143788145800
+    },
+    {
+      "query": ":SOUR1:CONT:STAT?",
+      "response": "1",
+      "pc_ns": 18143792610800
+    },
+    {
+      "query": ":SOUR1:COMB:FEED?",
+      "response": "OFF",
+      "pc_ns": 18143797540000
+    },
+    {
+      "query": ":SOUR1:VOLT:UNIT?",
+      "response": "VPP",
+      "pc_ns": 18143802661200
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS:UNIT?",
+      "response": "V",
+      "pc_ns": 18143807844300
+    },
+    {
+      "query": ":SOUR1:FREQ:UNIT?",
+      "response": "HZ",
+      "pc_ns": 18143812662100
+    },
+    {
+      "query": ":SOUR1:PULS:DCYC:UNIT?",
+      "response": "PCT",
+      "pc_ns": 18143817620900
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1",
+      "pc_ns": 18143823667100
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0",
+      "pc_ns": 18143830065300
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0",
+      "pc_ns": 18143836784600
+    },
+    {
+      "query": ":SOUR1:FUNC:SQU:DCYC?",
+      "response": "5.00000E+1",
+      "pc_ns": 18143844037000
+    },
+    {
+      "write": ":SOUR1:FUNC DC",
+      "pc_ns": 18143844055600,
+      "realtime_ns": 1788869291984487800
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "DC",
+      "pc_ns": 18143955650300
+    },
+    {
+      "write": ":SOUR1:VOLT:OFFS 2.7",
+      "pc_ns": 18143955661400,
+      "realtime_ns": 1788869292096773800
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "2.700E+0",
+      "pc_ns": 18144015531600
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18144020963100
+    },
+    {
+      "write": ":OUTP1:STAT 1",
+      "pc_ns": 18148229252800,
+      "realtime_ns": 1788869296370440900
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "1",
+      "pc_ns": 18148239190600
+    },
+    {
+      "write": ":OUTP1:STAT 0",
+      "pc_ns": 18150020300600,
+      "realtime_ns": 1788869298161227000
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18150031119000
+    },
+    {
+      "write": ":OUTP1:STAT 0",
+      "pc_ns": 18150112286800,
+      "realtime_ns": 1788869298253254800
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18150123075600
+    },
+    {
+      "write": ":OUTP1:STAT 0",
+      "pc_ns": 18154132446300,
+      "realtime_ns": 1788869302273143000
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18154142864700
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18154147789900
+    },
+    {
+      "query": ":OUTP2:STAT?",
+      "response": "0",
+      "pc_ns": 18154152806200
+    },
+    {
+      "write": ":SOUR1:VOLT:OFFS 1.5",
+      "pc_ns": 18154152808000,
+      "realtime_ns": 1788869302291370200
+    },
+    {
+      "write": ":SOUR1:FUNC SQU",
+      "pc_ns": 18154152915900,
+      "realtime_ns": 1788869302291370200
+    },
+    {
+      "query": ":SOUR1:FUNC?",
+      "response": "SQU",
+      "pc_ns": 18154340052100
+    },
+    {
+      "query": ":SOUR1:VOLT:OFFS?",
+      "response": "1.500E+0",
+      "pc_ns": 18154346137500
+    },
+    {
+      "query": ":SOUR1:VOLT?",
+      "response": "2.400E+0",
+      "pc_ns": 18154353326100
+    },
+    {
+      "query": ":SOUR1:FREQ?",
+      "response": "5.000000000E+1",
+      "pc_ns": 18154359201600
+    },
+    {
+      "query": ":OUTP1:STAT?",
+      "response": "0",
+      "pc_ns": 18154365680700
+    }
+  ],
+  "wiring": "WF1974 via R3 1k to GPIO17, R4 10k to 3.3V, common GND, fan Tach disconnected; unchanged user-authorized assumption",
+  "configuration_writes": "WF CH1 DC endpoint while OFF; restored to SQU/2.4Vpp/+1.5V; no Pi changes",
+  "off_dmm_v_user_report": 3.242,
+  "fast_rate": null,
+  "settled_mode": true,
+  "dc_level": 2.7,
+  "guard_revision": "OFF median must agree with DMM within 0.10 V; raw envelope -0.3..3.5 V accounts for observed OFF scatter, not a GPIO absolute rating. Source remains qualified 2.4Vpp/+1.5V.",
+  "gpio17_before": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_before": "18: op -- -- | hi // GPIO18 = output",
+  "gpioinfo": "gpiochip0 17\t\"GPIO17\"        \tinput",
+  "kernel": "Linux wind-tunnel 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64 GNU/Linux",
+  "boot_id": "b23a84fa-0a21-41aa-b947-8a12a19431ad",
+  "pad": {
+    "ranges": [
+      [
+        "0x7e000000",
+        "0x3f000000",
+        "0x1000000"
+      ],
+      [
+        "0x40000000",
+        "0x40000000",
+        "0x1000"
+      ]
+    ],
+    "cpu_address": "0x3f10002c",
+    "pad_gpio0_27": "0x1b",
+    "hysteresis_enabled": true,
+    "slew_unlimited": true,
+    "drive_code": 3,
+    "read_only": true
+  },
+  "off_before_acquiring_received_pc_ns": 18144384934600,
+  "off_before": {
+    "source": "Pi GPIO17 kernel events",
+    "status": "completed",
+    "gpiod": "2.2.0",
+    "edge": "rising",
+    "bias": "AS_IS",
+    "debounce_us": 0,
+    "start_ns": 12821714371110,
+    "start_realtime_ns": 1788869292379702595,
+    "initial_value": "ACTIVE",
+    "requested_duration_s": 3.0,
+    "end_ns": 12824721649749,
+    "end_realtime_ns": 1788869295386982014,
+    "final_value": "ACTIVE",
+    "count": 0,
+    "sequence_gaps": 0
+  },
+  "settled_poll": {
+    "source": "Pi read-only GPLEV0 polling",
+    "utc": "2026-09-08T12:08:16.823959+00:00",
+    "requested_duration_s": 0.25,
+    "counts": {
+      "low": 0,
+      "high": 37376
+    },
+    "detection_before": {
+      "REN": false,
+      "FEN": false,
+      "HEN": false,
+      "LEN": false,
+      "AREN": false,
+      "AFEN": false
+    },
+    "elapsed_s": 0.250006616,
+    "polls": 37376,
+    "transition_count": 0,
+    "transition_cap_reached": false,
+    "detection_after": {
+      "REN": false,
+      "FEN": false,
+      "HEN": false,
+      "LEN": false,
+      "AREN": false,
+      "AFEN": false
+    },
+    "note": "Irregular software polling, not continuous waveform or calibrated edge timestamps"
+  },
+  "on_comparison_acquiring_received_pc_ns": 18149517828100,
+  "on_comparison": {
+    "source": "Pi GPIO17 kernel events",
+    "status": "completed",
+    "gpiod": "2.2.0",
+    "edge": "rising",
+    "bias": "AS_IS",
+    "debounce_us": 0,
+    "start_ns": 12826845299980,
+    "start_realtime_ns": 1788869297510630736,
+    "initial_value": "ACTIVE",
+    "requested_duration_s": 0.5,
+    "end_ns": 12827349972875,
+    "end_realtime_ns": 1788869298015303214,
+    "final_value": "ACTIVE",
+    "count": 0,
+    "sequence_gaps": 0
+  },
+  "scope_status": "completed",
+  "scope_blocks": 319,
+  "off_after_acquiring_received_pc_ns": 18150868678600,
+  "off_after": {
+    "source": "Pi GPIO17 kernel events",
+    "status": "completed",
+    "gpiod": "2.2.0",
+    "edge": "rising",
+    "bias": "AS_IS",
+    "debounce_us": 0,
+    "start_ns": 12828196767616,
+    "start_realtime_ns": 1788869298862097069,
+    "initial_value": "ACTIVE",
+    "requested_duration_s": 3.0,
+    "end_ns": 12831205010705,
+    "end_realtime_ns": 1788869301870342867,
+    "final_value": "ACTIVE",
+    "count": 0,
+    "sequence_gaps": 0
+  },
+  "gpio17_after": "17: ip    -- | hi // GPIO17 = input",
+  "gpio18_after": "18: op -- -- | hi // GPIO18 = output",
+  "completed": true,
+  "final_output1": "0",
+  "final_output2": "0",
+  "restored_settings": {
+    ":SOUR1:FUNC?": "SQU",
+    ":SOUR1:VOLT:OFFS?": "1.500E+0",
+    ":SOUR1:VOLT?": "2.400E+0",
+    ":SOUR1:FREQ?": "5.000000000E+1",
+    ":OUTP1:STAT?": "0"
+  }
+}
