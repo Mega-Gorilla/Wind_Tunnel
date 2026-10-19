@@ -34,10 +34,16 @@
 
 テキスト・PDF抽出文字とメタデータ・Office/ZIP/NPZ内のデータ・画像メタデータを点検し、図とPDF紙面も確認する。パターン一致は値を表示せず、ファイルと検出規則のみを報告する。測定用の合成テストIP、OpenFOAM配布物の固定ユーザーパス、検査コード中の文字列は実機接続情報と区別する。
 
-## 限界と次の確認
+## GitHubへの公開と動作確認
 
-2026-10-19、[Mega-Gorilla/Wind_Tunnel](https://github.com/Mega-Gorilla/Wind_Tunnel)の作成と `origin` 設定を完了。GitHub APIで `PUBLIC` / `isEmpty: true`、リモート参照が空であることを確認した。初回pushは未実施。送信予定のローカル履歴はnoreplyメールを使う初回コミット1件で、除外前の履歴を含まない。
+2026-10-19、[Mega-Gorilla/Wind_Tunnel](https://github.com/Mega-Gorilla/Wind_Tunnel)へ初回コミット `19b5ddf` をpushした。作者・コミッターはGitHubのnoreplyメールで、除外前の履歴を含まない。公開直前にも1,564ファイルの監査に合格した。
+
+[初回CI](https://github.com/Mega-Gorilla/Wind_Tunnel/actions/runs/39239445554)はGitHubのLinux環境・Python 3.12で成功。公開監査、KiCad相対参照38件、監査テスト8件、模擬ソフトテスト95件を確認した。実機接続・運転は行っていない。Node.js 20を対象とするsetup-pythonアクションと、Starlette/httpx連携の非推奨警告が残っている。
+
+[Issue選択画面](https://github.com/Mega-Gorilla/Wind_Tunnel/issues/new/choose)と、不具合報告・測定とハードウェア検証・機能追加と改善の3フォームをログイン後のブラウザーで確認した。タイトル接頭辞、各入力欄、必須表示、機能分類の7選択肢が表示される。テストIssueは投稿せず、投稿後の通知や必須項目の送信時検証は試していない。
+
+## 限界と次の確認
 
 機械スキャンやサムネイル確認は、秘密情報が絶対に存在しないことや権利の適法性を保証しない。画像はOCRでの全数文字検査ではない。新しいファイル・履歴を追加した場合は再監査する。
 
-リポジトリ作成とpushは別操作。GitHubでのCI実行、Issueフォーム表示、ブランチ保護の確認は初回push後に行う。プロジェクト独自部分のライセンスは未選定。
+ブランチ保護・必須チェックは今回変更していない。PR運用の開始時に設定方針を決める。プロジェクト独自部分のライセンスは未選定。

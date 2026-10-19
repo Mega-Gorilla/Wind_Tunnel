@@ -25,14 +25,14 @@ New-Item -ItemType Directory -Path .runtime -Force | Out-Null
 cd ../..
 .\software\control\.venv\Scripts\python.exe -m unittest discover -s tools/repository/tests -v
 git add -- <変更したファイル>
-.\software\control\.venv\Scripts\python.exe tools/repository/audit.py --staged
+.\software\control\.venv\Scripts\python.exe tools/repository/audit.py --staged --public
 ```
 
 Linuxでは `.venv/bin/python` と `mkdir -p .runtime` を使用する。`--basetemp` のディレクトリはpytestが毎回消去するため、テスト専用の場所だけを指定する。実行DBなどを保存する `.runtime` 自体は指定しない。CIは同じPythonテストと、Git登録内容・回路依存ファイルの監査を実行する。SSH接続、実機運転、FW書込み、印刷、CFD計算はCIから実行しない。
 
-`audit.py --staged` は作業ファイルではなくGitのステージ済み内容を確認する。50 MiB超、秘密情報の典型パターン、回路依存ファイル、資料リンクの大文字小文字を検査する。除外対象へのリンクはローカル専用として列挙する。パターン検査は秘密の不存在を保証しないため、差分と添付物も確認する。
+`audit.py --staged --public` は作業ファイルではなくGitのステージ済み内容を確認する。50 MiB超、秘密情報の典型パターン、回路依存ファイル、資料リンクの大文字小文字、公開確認済みCADの範囲を検査する。公開版にない資料へのリンクもエラーとする。パターン検査は秘密の不存在を保証しないため、差分と添付物も確認する。
 
-PDFを含む初回送信前の追加点検には、pypdfを用意した環境で `python tools/repository/audit.py --staged --documents` を使用する。PDF画像内の文字やCAD内部メタデータの全面審査、ライセンス審査の代わりにはならない。
+PDFを含む送信前の追加点検には、pypdfを用意した環境で `python tools/repository/audit.py --staged --public --documents` を使用する。PDF画像内の文字やCAD内部メタデータの全面審査、ライセンス審査の代わりにはならない。
 
 ## 回路と機械設計の変更
 
@@ -40,7 +40,7 @@ PDFを含む初回送信前の追加点検には、pypdfを用意した環境で
 - KiCad 9系と標準ライブラリを基準とし、参照には`${KIPRJMOD}`またはKiCad標準変数を使用する。利用者PCの絶対パスをライブラリ参照へ追加しない。
 - 回路変更ではERC、基板変更ではDRCと製造出力の差を確認する。保存済み検査結果を、新しい変更後の合格証拠として再利用しない。
 - 製造用Gerber ZIPを変更する場合、元のPCB、BOM、組立・配線資料との対応をPRに示す。
-- STEP/STLはGitへ含める。バイナリや大きいCADの更新が増えたら、初回履歴を増やし続ける前にLFSまたはリリース添付を検討する。
+- 独自部品のSTEP/STLのみGitへ含める。公式配布の風洞CADやその形状を含む結合モデルは追加しない。新しい独自CADはレビュー後に `tools/repository/publication_policy.json` の一覧へ追加する。大きいCADの更新が増えたらLFSまたはリリース添付を検討する。
 - Fusionクラウドの履歴と、保存したSTEP/STLは別物。Git内の出力だけでFusionの全パラメトリック履歴を復元できるとはみなさない。
 
 ## 証拠と秘密情報

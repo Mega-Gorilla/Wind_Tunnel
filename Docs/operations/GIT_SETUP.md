@@ -29,7 +29,7 @@ Git内の文書パスは `Docs` です。Windowsで既存の表示名が `docs` 
 
 ## GitHubリポジトリとpush
 
-2026-10-19、[Mega-Gorilla/Wind_Tunnel](https://github.com/Mega-Gorilla/Wind_Tunnel)を公開設定で作成し、ローカルの `origin` に登録した。作成確認時点では空のリポジトリで、初回pushは未実施。
+2026-10-19、[Mega-Gorilla/Wind_Tunnel](https://github.com/Mega-Gorilla/Wind_Tunnel)を公開設定で作成し、`main` の初回pushを完了した。ローカルの `origin/main` を追跡している。[初回CI](https://github.com/Mega-Gorilla/Wind_Tunnel/actions/runs/39239445554)は公開監査・監査テスト8件・模擬ソフトテスト95件すべて成功。
 
 公開リポジトリの作成と、ローカル内容の送信は別の操作です。送信先・公開範囲を再確認してから、承認されたブランチだけをpushします。ローカルの復旧用履歴を公開する `--mirror` は使いません。
 
@@ -42,7 +42,9 @@ git push -u origin main
 
 このコードブロックは手順であり、自動実行指示ではありません。originが未設定なら、確定したGitHub URLを登録してください。既存originを確認なしに上書きしないでください。
 
-初回push後にIssueフォーム、PRテンプレート、CIの表示・実行を確認します。テンプレートは機能改善・不具合・測定検証の3種類です。推奨運用はIssueに目的と受入条件を記し、PRで変更し、CI成功を確認することです。
+[Issueフォーム選択画面](https://github.com/Mega-Gorilla/Wind_Tunnel/issues/new/choose)で機能改善・不具合・測定検証の3種類が表示され、各フォームのタイトル接頭辞・入力欄・必須表示を確認しました。機能分類の7選択肢も表示されます。確認は未入力・未投稿で行い、テストIssueは作成していません。
+
+CIには `actions/setup-python@v5` のNode.js 20と、Starlette/httpx連携の非推奨警告があります。実行は成功していますが、依存更新時に対応を検討してください。ブランチ保護・必須チェック設定は今回変更していません。推奨運用はIssueに目的と受入条件を記し、PRで変更し、CI成功を確認することです。
 
 ## 参考
 
